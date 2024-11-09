@@ -16,8 +16,7 @@
         <a href="#gallery"> Gallery </a>
         <a href="#contactme"> Contact Me </a>
     </nav>
-    <button class="nav-btn nav-close-btn"> lol </button>
-    <button class="nav-btn"> <Flag /> </button>
+    <button> <Flag {currentLanguage} /> </button>
 </header>
 
 <style>
