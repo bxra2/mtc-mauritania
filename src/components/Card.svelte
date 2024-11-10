@@ -13,6 +13,7 @@
             <li>{item}</li>
         {/each}
     </ul>
+    <!-- <button>haha</button> -->
 </div>
 
 <style>
@@ -40,11 +41,12 @@
         justify-content: center; /* Horizontal centering */
         align-items: center;
         padding: 50px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
     .card .ilustration i {
-       
-        border-radius: 20%;
+        border-radius: 10%;
         overflow: hidden;
+        text-align: center;
         color: #f2f4f5;
         margin: auto;
         
@@ -75,7 +77,7 @@
         border: 0;
         margin: 30px 0;
         outline: none;
-        background-color: #81c784;
+        background-color:  #143c64;
         box-shadow:
             10px 10px 10px rgba(122, 196, 125, 0.2),
             -10px -10px 10px rgba(136, 202, 139, 0.2);

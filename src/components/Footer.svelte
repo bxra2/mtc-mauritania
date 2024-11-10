@@ -3,10 +3,7 @@
     export let currentLanguage
 </script>
 
-<footer class="footer">
-    <div class="footer__parralax">
-        <div class="footer__parralax-premierplan"></div>
-    </div>
+<footer id="contactme" class="footer">
     <div class="container">
         <div class="footer__columns">
             <div class="footer__col">
@@ -108,18 +105,19 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 
-    .container {
-        width: 100%;
-        max-width: 1600px;
-        margin: 0 auto;
-    }
     .footer {
         position: relative;
         margin-top: 300px;
         padding: 3rem 0;
         color: #fff;
         background: #124c87;
-        margin-top: auto;
+        margin-top: 70px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
     }
     .footer__columns {
         display: flex;
@@ -159,112 +157,5 @@
     }
     .footer__copyrights p a {
         margin-left: 0.5rem;
-    }
-    @keyframes parralax {
-        0% {
-            background-position: 260px;
-        }
-        100% {
-            background-position: -10000vw;
-        }
-    }
-    @keyframes moto {
-        0% {
-            transform: translateY(0) rotate(0);
-        }
-        5% {
-            transform: translateY(0) rotate(-5deg);
-        }
-        25% {
-            transform: translateY(60px) rotate(-20deg);
-        }
-        49% {
-            transform: translateY(0) rotate(-1deg);
-        }
-        51% {
-            transform: translateY(0) rotate(1deg);
-        }
-        75% {
-            transform: translateY(60px) rotate(20deg);
-        }
-        80% {
-            transform: translateY(60px) rotate(0deg);
-        }
-        98% {
-            transform: translateY(0) rotate(0);
-        }
-    }
-    @keyframes voiture {
-        0% {
-            transform: rotate(0);
-        }
-        25% {
-            transform: rotate(-5deg);
-        }
-        50% {
-            transform: rotate(0);
-        }
-        75% {
-            transform: rotate(5deg);
-        }
-        100% {
-            transform: rotate(0);
-        }
-    }
-    .footer__parralax {
-        position: absolute;
-        left: 0;
-        top: -300px;
-        height: 300px;
-        width: 100%;
-        overflow: hidden;
-    }
-    .footer__parralax-premierplan {
-        background-position: 260px;
-    }
-    .footer__parralax-trees,
-    .footer__parralax-premierplan,
-    .footer__parralax-secondplan {
-        position: absolute;
-        inset: 0;
-        background-repeat: repeat-x;
-        background-position-y: 100% !important;
-        animation: parralax 600s linear infinite;
-    }
-    .footer__parralax-moto {
-        position: absolute;
-        bottom: 80px;
-        left: 50%;
-        margin-left: -250px;
-        height: 200px;
-        width: 150px;
-        background: url(https://i.ibb.co/JCGfFJd/moto-net.gif);
-        background-repeat: no-repeat;
-        transform-origin: 50% 80%;
-        animation: moto 5s linear infinite;
-    }
-    .footer__parralax-voiture {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        margin-left: 250px;
-        height: 114px;
-        width: 206px;
-        background: url(https://i.ibb.co/0Qhp4DN/voiture-fumee.gif);
-        background-repeat: no-repeat;
-        animation: voiture 1s linear infinite;
-    }
-    .footer__parralax-trees {
-        background-image: url(https://i.ibb.co/nQM4PGJ/arbres.png);
-        bottom: -60px;
-        animation-duration: 1000s;
-    }
-    .footer__parralax-premierplan {
-        background-image: url(https://i.ibb.co/RQhDWbk/premierplanv3.png);
-        animation-duration: 500s;
-    }
-    .footer__parralax-secondplan {
-        background-image: url(https://i.ibb.co/J3TjC4W/second-plan.png);
-        animation-duration: 600s;
     }
 </style>

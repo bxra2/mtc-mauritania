@@ -7,6 +7,7 @@
     import Telecom from './components/Telecom.svelte'
     import OurPartners from './components/OurPartners.svelte'
     import Footer from './components/Footer.svelte'
+    import Activities from './components/Activities.svelte'
     ///
     let currentLanguage
     language.subscribe((value) => {
@@ -17,6 +18,7 @@
 <main>
     <NavBar {currentLanguage} />
     <History {currentLanguage} />
+    <Activities {currentLanguage} />
     <Telecom {currentLanguage} />
     <OurPartners {currentLanguage} />
     <Footer {currentLanguage} />

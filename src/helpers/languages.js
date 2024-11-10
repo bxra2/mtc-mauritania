@@ -23,24 +23,39 @@ export const languages = {
                 2: '',
             },
         },
+        activity: {
+            telecomTitle: 'DESIGN',
+            energyTitle: 'ENERGY',
+            itTitle: 'IT',
+
+            telecom: [
+                "Principale activité de l'entreprise : Infrastructure, Réseaux de télécommunication Fibre optique, GSM",
+            ],
+            energy: [
+                "Projets clés en main de la conception à la mise en œuvre. Construction, conception et maintenance d'installations solaires.",
+            ],
+            it: [
+                "La programmation informatique, l'administration système, la gestion de réseau, la cybersécurité, l'analyse de données ...",
+            ],
+        },
         telecom: {
-            designTitle:'DESIGN',
-            facilityTitle:'FACILITY',
-            maintenanceTitle:'MAINTENANCE',
+            designTitle: 'DESIGN',
+            facilityTitle: 'FACILITY',
+            maintenanceTitle: 'MAINTENANCE',
 
             design: [
                 'Acquisition, construction et installation des équipements/intégration des sites mobiles.',
                 'Définition des choix techniques en matière de construction et d’électrification des sites.',
-                'Réalisation des sites avec des solutions esthétiques'
+                'Réalisation des sites avec des solutions esthétiques',
             ],
             facility: [
                 'Travaux de branchement électrique des sites Télécom (générateurs électriques, panneaux solaires, énergie hybride).',
-                'Installation des équipements de communication et Wireless et des infrastructures nécessaires.'
+                'Installation des équipements de communication et Wireless et des infrastructures nécessaires.',
             ],
             maintenance: [
                 'Maintenance des sites GSM/GSM-R ONCF.',
-                'Gestion des blocages avec les riverains et les autorités, impliquant peut-être des interventions de maintenance ou de réparation pour résoudre les problèmes rencontrés.'
-            ]
+                'Gestion des blocages avec les riverains et les autorités, impliquant peut-être des interventions de maintenance ou de réparation pour résoudre les problèmes rencontrés.',
+            ],
         },
         footer: {
             followUs: 'FOLLOW US',
@@ -70,6 +85,25 @@ export const languages = {
                 1: "Nous sommes une entreprise engagée dans le maintien de la qualité, des normes environnementales et de l'excellence.",
                 2: 'Contribuer à un monde plus durable tout en aidant nos clients dans leurs différents projets, en proposant des services de qualité.',
             },
+        },
+        telecom: {
+            designTitle: 'DESIGN',
+            facilityTitle: 'FACILITY',
+            maintenanceTitle: 'MAINTENANCE',
+
+            design: [
+                'Acquisition, construction et installation des équipements/intégration des sites mobiles.',
+                'Définition des choix techniques en matière de construction et d’électrification des sites.',
+                'Réalisation des sites avec des solutions esthétiques',
+            ],
+            facility: [
+                'Travaux de branchement électrique des sites Télécom (générateurs électriques, panneaux solaires, énergie hybride).',
+                'Installation des équipements de communication et Wireless et des infrastructures nécessaires.',
+            ],
+            maintenance: [
+                'Maintenance des sites GSM/GSM-R ONCF.',
+                'Gestion des blocages avec les riverains et les autorités, impliquant peut-être des interventions de maintenance ou de réparation pour résoudre les problèmes rencontrés.',
+            ],
         },
         footer: {
             followUs: 'SUIVEZ-NOUS',
