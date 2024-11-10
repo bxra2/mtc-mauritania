@@ -2,7 +2,7 @@
     import '@fortawesome/fontawesome-free/css/all.css'
     import Flag from './Flag.svelte'
     // import MTCLOGO from '../assets/logo-4.png'
-    import { languages } from '../languages'
+    import { languages } from '../helpers/languages'
 
     export let currentLanguage
 </script>

@@ -1,7 +1,7 @@
 <!-- Flag.svelte -->
 <script>
-    import { language } from '../languageStore'
-    import { languages } from '../languages'
+    import { language } from '../helpers/languageStore'
+    import { languages } from '../helpers/languages'
 
     export let currentLanguage
     // Function to change language

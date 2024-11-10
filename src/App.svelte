@@ -1,8 +1,12 @@
 <script>
     import { writable } from 'svelte/store'
-    import { language } from './languageStore.js'
+    import { language } from './helpers/languageStore.js'
     ////
     import NavBar from './components/Navbar.svelte'
+    import History from './components/History.svelte'
+    import Telecom from './components/Telecom.svelte'
+    import OurPartners from './components/OurPartners.svelte'
+    import Footer from './components/Footer.svelte'
     ///
     let currentLanguage
     language.subscribe((value) => {
@@ -12,6 +16,10 @@
 
 <main>
     <NavBar {currentLanguage} />
+    <History {currentLanguage} />
+    <Telecom {currentLanguage} />
+    <OurPartners {currentLanguage} />
+    <Footer {currentLanguage} />
 </main>
 
 <style>
