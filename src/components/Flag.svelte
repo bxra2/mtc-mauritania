@@ -22,22 +22,22 @@
 
         <ul class="dropdown-content">
             <li>
-                <a href="#">
+                <a href="#" on:click={() => setLanguage('en')}>
                     <img
                         src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
                         alt="English"
                         class="flag"
-                        on:click={() => setLanguage('en')}
                     /></a
                 >
             </li>
             <li>
-                <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg"
-                    alt="Français"
-                    class="flag"
-                    on:click={() => setLanguage('fr')}
-                />
+                <a href="#" on:click={() => setLanguage('fr')}>
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg"
+                        alt="Français"
+                        class="flag"
+                    />
+                </a>
             </li>
             <li><a href="#"></a></li>
         </ul>
@@ -50,6 +50,8 @@
         height: 20px;
         cursor: pointer;
         margin-right: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Icon shadow */
     }
     .dropdown {
         list-style: none;

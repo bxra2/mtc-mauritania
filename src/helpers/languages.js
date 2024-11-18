@@ -3,7 +3,13 @@ export const languages = {
     en: {
         flag: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg',
         greeting: 'Hello',
-        history: 'History',
+        navbar: {
+            home: 'Home',
+            history: 'History',
+            activity: 'Area of Activity',
+            partners: 'Partners',
+            contact: 'Contact',
+        },
         ourHistory: {
             title: 'NOTRE HISTORIQUE',
             points: {
@@ -66,7 +72,13 @@ export const languages = {
     fr: {
         flag: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg',
         greeting: 'Bonjour',
-        history: 'Histoire',
+        navbar: {
+            home: 'Home',
+            history: 'Histoire',
+            activity: 'Domaine d\'activité',
+            partners: 'Partners',
+            contact: 'Contact',
+        },
         ourHistory: {
             title: 'NOTRE HISTORIQUE',
             points: {

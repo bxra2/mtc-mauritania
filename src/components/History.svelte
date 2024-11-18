@@ -7,44 +7,49 @@
 <h1>{languages[currentLanguage].ourHistory.title}</h1>
 <br />
 <ul>
-    <li style="--accent-color:#41516C">
+    <li style="--accent-color:#13538a">
         <div class="date">2023-2024</div>
-        <div class="title">Title 1</div>
+        &emsp;
         <div class="descr">
             Extension CA +4MDHS
             <strong>UK Second Office & NY LLC Third Office</strong>
         </div>
     </li>
-    <li style="--accent-color:#FBCA3E">
+    <li style="--accent-color:#1c88cf">
         <div class="date">2022</div>
-        <div class="title">Title 2</div>
+        &emsp;
+        <br />
         <div class="descr">
             Augmentation du Capital Augmentation de 69% CA = 2MDH
         </div>
     </li>
-    <li style="--accent-color:#E24A68">
+    <li style="--accent-color:#18afd6">
         <div class="date">2021</div>
-        <div class="title">Title 3</div>
+        &emsp;
+        <br />
         <div class="descr">Augmentation du capital Augmentation de 109%</div>
     </li>
-    <li style="--accent-color:#1B5F8C">
+    <li style="--accent-color:#37c9ef">
         <div class="date">2020</div>
-        <div class="title">Title 4</div>
+        &emsp;
+        <br />
         <div class="descr">
             Diversification des projets Entretien réseaux GSM-R ONCF, Fibre
             Optique, Forage horizontaux
         </div>
     </li>
-    <li style="--accent-color:#4CADAD">
+    <li style="--accent-color:#3edad8">
         <div class="date">2018</div>
-        <div class="title">Title 5</div>
+        &emsp;
+        <br />
         <div class="descr">
             Démarrage des activités Projet télécom GSM & Fibre optique
         </div>
     </li>
     <li style="--accent-color:#86eae9">
         <div class="date">2017</div>
-        <div class="title">Title 5</div>
+        &emsp;
+        <br />
         <div class="descr">
             {languages[currentLanguage].ourHistory.points[2017]}
         </div>

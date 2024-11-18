@@ -5,8 +5,9 @@
 <div class="card">
     <div class="ilustration">
         <i class={`${iconClasses}`}></i>
+        <h3>{title}</h3>
+
     </div>
-    <h3>{title}</h3>
     <ul>
         {#each desc as item}
             <br />
@@ -19,11 +20,8 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
     /*5 Minutes Challenge*/
-    body {
-        background: #eceff1;
-    }
     .card {
-        background-color: #eceff1;
+        background-color: #eaeaea;
         border-radius: 30px;
         text-align: center;
         padding: 15px;
@@ -40,7 +38,7 @@
         display: flex;
         justify-content: center; /* Horizontal centering */
         align-items: center;
-        padding: 50px;
+        padding: 20px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
     .card .ilustration i {
@@ -49,7 +47,6 @@
         text-align: center;
         color: #f2f4f5;
         margin: auto;
-        
     }
     .card h3 {
         font-family: 'Fredoka', sans-serif;
@@ -77,7 +74,7 @@
         border: 0;
         margin: 30px 0;
         outline: none;
-        background-color:  #143c64;
+        background-color: #143c64;
         box-shadow:
             10px 10px 10px rgba(122, 196, 125, 0.2),
             -10px -10px 10px rgba(136, 202, 139, 0.2);
@@ -96,7 +93,11 @@
             inset -1px -1px 3px rgba(122, 196, 125, 0.3),
             -20px -20px 20px rgba(136, 202, 139, 0);
     }
+    ul{
+        padding: 0;
+    }
     li {
         list-style: none;
+        text-align: center;
     }
 </style>

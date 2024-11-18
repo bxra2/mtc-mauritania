@@ -1,10 +1,9 @@
 <script>
     import { partnerImages } from "../helpers/Routes";
-    let partner1 = 'http://localhost:5173/images/partners/partner1.png'
     export let currentLanguage
 </script>
 
-<section>
+<section id="partners">
     <h1>Our Partners</h1>
     <div class="slider">
         <div class="slider-items">
@@ -38,6 +37,7 @@
     section {
         display: grid;
         place-items: center;
+        margin: 50px 0px;
     }
 
     h1 {

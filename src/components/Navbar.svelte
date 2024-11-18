@@ -1,22 +1,22 @@
 <script>
     import '@fortawesome/fontawesome-free/css/all.css'
     import Flag from './Flag.svelte'
-    // import MTCLOGO from '../assets/logo-4.png'
+    import { whitelogo } from '../helpers/Routes'
     import { languages } from '../helpers/languages'
 
     export let currentLanguage
 </script>
 
 <header class="nav-header">
-    <h3 class="navbar-logo"><img alt="MTC" /></h3>
+    <img class="navbar-logo" alt="MTC" src={whitelogo} />
     <nav class="navbar">
-        <a href="/#"> Home </a>
-        <a href="#aboutme"> {languages[currentLanguage].history} </a>
-        <a href="#career"> Career </a>
-        <a href="#gallery"> Gallery </a>
-        <a href="#contactme"> Contact Me </a>
+        <a href="/#"> {languages[currentLanguage].navbar.home} </a>
+        <a href="#aboutme"> {languages[currentLanguage].navbar.history} </a>
+        <a href="#career"> {languages[currentLanguage].navbar.activity} </a>
+        <a href="#partners"> {languages[currentLanguage].navbar.partners} </a>
+        <a href="#contact"> {languages[currentLanguage].navbar.contact} </a>
     </nav>
-    <button> <Flag {currentLanguage} /> </button>
+    <Flag {currentLanguage} />
 </header>
 
 <style>
@@ -26,18 +26,19 @@
         justify-content: space-between;
         height: 8dvh;
         padding: 0 2rem;
-        background-color: #eee;
+        border-radius: 0px 0px 25px 25px;
+        background: linear-gradient(to bottom right, #0c3259, #124c87);
         color: var(--textColor);
     }
 
     .navbar-logo {
         color: #7f591c;
-        font-size: 1.5rem;
+        height: 50px;
     }
 
     .navbar a {
         margin: 0 1rem;
-        color: #040404;
+        color: #eee;
         text-decoration: none;
         transition: 0.3s;
     }

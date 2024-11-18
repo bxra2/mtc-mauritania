@@ -1,11 +1,10 @@
 <script>
     import Card from './Card.svelte'
     import { languages } from '../helpers/languages'
-
     export let currentLanguage
 </script>
 
-<h1>oabd</h1>
+<h1>DOMAINE D’ACTIVITÉ</h1>
 <div class="container">
     <Card
         iconClasses={'fa-solid fa-tower-cell fa-6x'}
@@ -25,6 +24,9 @@
 </div>
 
 <style>
+    h1 {
+        text-align: center;
+    }
     .container {
         display: flex;
         flex-wrap: wrap;
