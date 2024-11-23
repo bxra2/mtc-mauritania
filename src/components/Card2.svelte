@@ -14,7 +14,7 @@
         <p class="card-text">
             {desc}
         </p>
-        <button class="card-btn one"><Dialog /></button>
+        <button class="card-btn one"><Dialog {title} /></button>
     </div>
 </div>
 
@@ -49,7 +49,7 @@
     }
     .card-wrap {
         width: 300px;
-        margin:20px;
+        margin: 20px;
         background: #fff;
         border-radius: 20px;
         border: 5px solid #fff;
