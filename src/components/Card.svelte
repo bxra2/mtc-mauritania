@@ -1,12 +1,12 @@
 <script>
     export let title, desc, iconClasses
+    import Dialog from './Dialog.svelte'
 </script>
 
 <div class="card">
     <div class="ilustration">
         <i class={`${iconClasses}`}></i>
         <h3>{title}</h3>
-
     </div>
     <ul>
         {#each desc as item}
@@ -14,7 +14,7 @@
             <li>{item}</li>
         {/each}
     </ul>
-    <!-- <button>haha</button> -->
+    <Dialog />
 </div>
 
 <style>
@@ -93,7 +93,7 @@
             inset -1px -1px 3px rgba(122, 196, 125, 0.3),
             -20px -20px 20px rgba(136, 202, 139, 0);
     }
-    ul{
+    ul {
         padding: 0;
     }
     li {

@@ -77,7 +77,7 @@
     }
 
     .funfact-wrapper .funfact-content-grid {
-        background-color: #f04e04;
+        background-color: #064888;
         -ms-flex-pack: distribute;
         justify-content: space-around;
     }

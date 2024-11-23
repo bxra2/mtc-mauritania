@@ -11,8 +11,8 @@
     <img class="navbar-logo" alt="MTC" src={whitelogo} />
     <nav class="navbar">
         <a href="/#"> {languages[currentLanguage].navbar.home} </a>
-        <a href="#aboutme"> {languages[currentLanguage].navbar.history} </a>
-        <a href="#career"> {languages[currentLanguage].navbar.activity} </a>
+        <a href="#history"> {languages[currentLanguage].navbar.history} </a>
+        <a href="#activities"> {languages[currentLanguage].navbar.activity} </a>
         <a href="#partners"> {languages[currentLanguage].navbar.partners} </a>
         <a href="#contact"> {languages[currentLanguage].navbar.contact} </a>
     </nav>

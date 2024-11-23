@@ -1,26 +1,29 @@
 <script>
-    import Card from './Card.svelte'
+    import Card2 from './Card2.svelte'
     import { languages } from '../helpers/languages'
     export let currentLanguage
 </script>
 
-<h1>DOMAINE D’ACTIVITÉ</h1>
+<div id="activities">
+    <h1>DOMAINE D’ACTIVITÉ</h1>
 <div class="container">
-    <Card
+    <Card2
+        title={languages[currentLanguage].activity.telecomTitle}
         iconClasses={'fa-solid fa-tower-cell fa-6x'}
         desc={languages[currentLanguage].activity.telecom}
-        title={languages[currentLanguage].activity.telecomTitle}
     />
-    <Card
+    <Card2
+        title={languages[currentLanguage].activity.energyTitle}
         iconClasses={'fa-solid fa-bolt fa-6x'}
         desc={languages[currentLanguage].activity.energy}
-        title={languages[currentLanguage].activity.energyTitle}
     />
-    <Card
+    <Card2
+        title={languages[currentLanguage].activity.itTitle}
         iconClasses={'fa-solid fa-network-wired fa-6x'}
         desc={languages[currentLanguage].activity.it}
-        title={languages[currentLanguage].activity.itTitle}
     />
+</div>
+
 </div>
 
 <style>
@@ -30,7 +33,7 @@
     .container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
         padding: 20px;
     }
 </style>

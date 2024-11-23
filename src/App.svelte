@@ -11,6 +11,9 @@
     import Footer from './components/Footer.svelte'
     import Footerr from './components/Footerr.svelte'
     import Activities from './components/Activities.svelte'
+    import Dialog from './components/Dialog.svelte'
+    import Card2 from './components/Card2.svelte'
+    import WorldMap from './components/WorldMap.svelte'
     ///
     let currentLanguage
     language.subscribe((value) => {
@@ -23,10 +26,10 @@
     <Hero />
     <History {currentLanguage} />
     <Activities {currentLanguage} />
-    <Telecom {currentLanguage} />
+    <WorldMap />
     <OurPartners {currentLanguage} />
     <Progress />
-    <Footerr {currentLanguage}/>
+    <Footerr {currentLanguage} />
 </main>
 
 <style>

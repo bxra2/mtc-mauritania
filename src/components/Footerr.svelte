@@ -66,8 +66,14 @@
                                 href="https://www.facebook.com/multiservicetelecomcompany/"
                                 ><i class="fab fa-facebook-f"></i></a
                             >
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a
+                                href="https://www.instagram.com/multiservice_telecom_company/"
+                                ><i class="fab fa-instagram"></i></a
+                            >
+                            <a
+                                href="https://www.linkedin.com/company/multiservice-telecom-company/"
+                                ><i class="fab fa-linkedin"></i></a
+                            >
                         </div>
                     </div>
                 </div>
@@ -77,16 +83,17 @@
                             <h3>Useful Links</h3>
                         </div>
                         <ul>
+                            <li><a href="#">{languages[currentLanguage].navbar.home} </a></li>
+                            <li><a href="#history">{languages[currentLanguage].navbar.history} </a></li>
+                            <li><a href="#">{languages[currentLanguage].navbar.activity}</a></li>
+                            <li><a href="#partners">{languages[currentLanguage].navbar.partners}</a></li>
+                            <li><a href="#">{languages[currentLanguage].navbar.contact} </a></li>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">about</a></li>
-                            <li><a href="#">services</a></li>
-                            <li><a href="#">portfolio</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Our Services</a></li>
+
+                            <!-- <li><a href="#">Our Services</a></li>
                             <li><a href="#">Expert Team</a></li>
                             <li><a href="#">Contact us</a></li>
-                            <li><a href="#">Latest News</a></li>
+                            <li><a href="#">Latest News</a></li> -->
                         </ul>
                     </div>
                 </div>
@@ -130,7 +137,7 @@
         border-bottom: 1px solid #373636;
     }
     .single-cta i {
-        color: #ff5e14;
+        color: #064888;
         font-size: 30px;
         float: left;
         margin-top: 8px;
@@ -216,7 +223,7 @@
         bottom: -15px;
         height: 2px;
         width: 50px;
-        background: #ff5e14;
+        background: #064888;
     }
     .footer-widget ul li {
         display: inline-block;
@@ -225,7 +232,7 @@
         margin-bottom: 12px;
     }
     .footer-widget ul li a:hover {
-        color: #ff5e14;
+        color: #064888;
     }
     .footer-widget ul li a {
         color: #878787;
@@ -245,9 +252,9 @@
     .subscribe-form button {
         position: absolute;
         right: 0;
-        background: #ff5e14;
+        background: #064888;
         padding: 13px 20px;
-        border: 1px solid #ff5e14;
+        border: 1px solid #064888;
         top: 0;
     }
     .subscribe-form button i {
@@ -265,14 +272,14 @@
         color: #878787;
     }
     .copyright-text p a {
-        color: #ff5e14;
+        color: #064888;
     }
     .footer-menu li {
         display: inline-block;
         margin-left: 20px;
     }
     .footer-menu li:hover a {
-        color: #ff5e14;
+        color: #064888;
     }
     .footer-menu li a {
         font-size: 14px;
