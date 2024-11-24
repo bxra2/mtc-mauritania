@@ -71,17 +71,8 @@
         box-sizing: border-box;
     }
 
-    body {
-        --color: rgba(30, 30, 30);
-        --bgColor: rgba(245, 245, 245);
-        min-height: 100vh;
-        display: grid;
-        align-content: center;
-        gap: 2rem;
-        padding: 2rem;
-        font-family: 'Poppins', sans-serif;
-        color: var(--color);
-        background: var(--bgColor);
+    #history {
+        margin: 30px 0;
     }
 
     h1 {
@@ -122,8 +113,10 @@
         grid-column: 2;
         --inlineP: 1.5rem;
         margin-inline: var(--inlineP);
+        background-color: #fff;
         grid-row: span 2;
         display: grid;
+        border-radius: 10px;
         grid-template-rows: min-content min-content min-content;
     }
 
@@ -179,9 +172,10 @@
     /* title descr */
     ul li .title,
     ul li .descr {
-        background: rgba(240, 240, 240, 0.6);
+        background: #fff;
         position: relative;
         padding-inline: 1.5rem;
+        border-radius: 10px;
     }
     ul li .title {
         overflow: hidden;

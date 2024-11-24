@@ -14,6 +14,7 @@
     import Dialog from './components/Dialog.svelte'
     import Card2 from './components/Card2.svelte'
     import WorldMap from './components/WorldMap.svelte'
+    import Video from './components/Video.svelte'
     ///
     let currentLanguage
     language.subscribe((value) => {
@@ -25,6 +26,7 @@
     <NavBar {currentLanguage} />
     <Hero />
     <History {currentLanguage} />
+    <Video />
     <Activities {currentLanguage} />
     <WorldMap />
     <OurPartners {currentLanguage} />
