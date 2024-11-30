@@ -164,7 +164,7 @@ export const languages = {
                 label: 'Collaborators',
             },
         ],
-
+        ourPartners: 'Our Partners',
         footer: {
             followUs: 'FOLLOW US',
         },
@@ -341,7 +341,7 @@ export const languages = {
         footer: {
             followUs: 'SUIVEZ-NOUS',
         },
-        activitiesDomain: {},
+        ourPartners: 'Nos partenaires',
         welcome: 'Bienvenue sur notre site web!',
         changeLanguage: 'Changer de langue',
     },

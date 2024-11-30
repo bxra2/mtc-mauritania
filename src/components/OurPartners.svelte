@@ -1,10 +1,14 @@
 <script>
     import { partnerImages } from '../helpers/Routes'
+    import { languages } from '../helpers/languages'
+
     export let currentLanguage
 </script>
 
 <section id="partners">
-    <h2 class="text-5xl font-bold text-gray-900 text-center">Our Partners</h2>
+    <h2 class="text-5xl font-bold text-gray-900 text-center">
+        {languages[currentLanguage].ourPartners}
+    </h2>
     <div class="slider">
         <div class="slider-items">
             {#each partnerImages as { src, alt, id }}
