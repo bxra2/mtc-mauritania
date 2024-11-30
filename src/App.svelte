@@ -30,7 +30,7 @@
     <Activities {currentLanguage} />
     <WorldMap {currentLanguage}/>
     <OurPartners {currentLanguage} />
-    <Progress />
+    <Progress {currentLanguage}/>
     <Footer {currentLanguage} />
 </main>
 

@@ -1,37 +1,25 @@
+<script>
+    import { languages } from '../helpers/languages'
+    export let currentLanguage
+</script>
+
 <section class="funfact-wrapper text-white">
     <div class="container">
         <div
             class="funfact-content-grid bg-cover bg-center"
             style="background-image: url('http://localhost:5173/cta-bg.png')"
         >
-            <div class="single-funfact-item">
-                <div class="icon">
-                    <i class="fa fa-users"></i>
+            {#each languages[currentLanguage].funFacts as { icon, number, label }}
+                <div class="single-funfact-item">
+                    <div class="icon">
+                        <i class={`fa ${icon}`}></i>
+                    </div>
+                    <h3 style="visibility: visible;" class="is-visible">
+                        {number}
+                    </h3>
+                    <p>{label}</p>
                 </div>
-                <h3 style="visibility: visible;" class="is-visible">368</h3>
-                <p>Clients</p>
-            </div>
-            <div class="single-funfact-item">
-                <div class="icon">
-                    <i class="fa-solid fa-list-check"></i>
-                </div>
-                <h3 style="visibility: visible;" class="is-visible">785</h3>
-                <p>Projets</p>
-            </div>
-            <div class="single-funfact-item">
-                <div class="icon">
-                    <i class="fa-regular fa-handshake"></i>
-                </div>
-                <h3 style="visibility: visible;" class="is-visible">40</h3>
-                <p>Partenaires</p>
-            </div>
-            <div class="single-funfact-item">
-                <div class="icon">
-                    <i class="fa-solid fa-user-tie"></i>
-                </div>
-                <h3 style="visibility: visible;" class="is-visible">45</h3>
-                <p>Collaborateur</p>
-            </div>
+            {/each}
         </div>
     </div>
 </section>

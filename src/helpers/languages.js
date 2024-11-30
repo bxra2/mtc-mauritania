@@ -142,6 +142,28 @@ export const languages = {
                 'OFFICE IN ITALY COMING SOON',
             ],
         },
+        funFacts: [
+            {
+                icon: 'fa-users',
+                number: 368,
+                label: 'Clients',
+            },
+            {
+                icon: 'fa-solid fa-list-check',
+                number: 785,
+                label: 'Projects',
+            },
+            {
+                icon: 'fa-regular fa-handshake',
+                number: 40,
+                label: 'Partners',
+            },
+            {
+                icon: 'fa-solid fa-user-tie',
+                number: 45,
+                label: 'Collaborators',
+            },
+        ],
 
         footer: {
             followUs: 'FOLLOW US',
@@ -293,6 +315,28 @@ export const languages = {
                 'BUREAU EN ITALIE À VENIR BIENTÔT',
             ],
         },
+        funFacts: [
+            {
+                icon: 'fa-users',
+                number: 368,
+                label: 'Clients',
+            },
+            {
+                icon: 'fa-solid fa-list-check',
+                number: 785,
+                label: 'Projets',
+            },
+            {
+                icon: 'fa-regular fa-handshake',
+                number: 40,
+                label: 'Partenaires',
+            },
+            {
+                icon: 'fa-solid fa-user-tie',
+                number: 45,
+                label: 'Collaborateur',
+            },
+        ],
 
         footer: {
             followUs: 'SUIVEZ-NOUS',
