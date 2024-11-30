@@ -2,7 +2,7 @@
     <div class="container">
         <div
             class="funfact-content-grid bg-cover bg-center"
-            style="background-image: url('../../public/cta-bg.png')"
+            style="background-image: url('http://localhost:5173/cta-bg.png')"
         >
             <div class="single-funfact-item">
                 <div class="icon">

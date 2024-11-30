@@ -3,12 +3,12 @@
     export let currentLanguage
 </script>
 
-<section id="mission" class="bg-[#eee] py-20">
+<section id="" class="bg-[#eee] py-20">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-5xl font-bold text-gray-900 text-center">
             {languages[currentLanguage].ourMission.title}
         </h2>
-        <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="mt-12 grid grid-cols-1 gap-20 sm:grid-cols-2 lg:grid-cols-3 lg:gap-32">
             <div>
                 <div
                     class="flex items-center justify-center h-12 w-12 rounded-md bg-[#064888] text-white"

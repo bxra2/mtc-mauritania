@@ -1,4 +1,3 @@
-<!-- Flag.svelte -->
 <script>
     import { language } from '../helpers/languageStore'
     import { languages } from '../helpers/languages'
@@ -12,24 +11,24 @@
 
 <div>
     <div class="dropdown">
-        <a href="#" class="dropbtn">
+        <button class="dropbtn">
             <img
                 src={languages[currentLanguage].flag}
-                alt="English"
+                alt={languages[currentLanguage].name}
                 class="flag"
-            /></a
-        >
+            />
+        </button>
 
         <ul class="dropdown-content">
             {#each Object.keys(languages) as lang}
                 <li>
-                    <a href="#" on:click={() => setLanguage(lang)}>
+                    <button on:click={() => setLanguage(lang)}>
                         <img
                             src={languages[lang].flag}
                             alt={languages[lang].name}
                             class="flag"
                         />
-                    </a>
+                    </button>
                 </li>
             {/each}
         </ul>
@@ -47,59 +46,58 @@
     }
 
     .dropdown {
-        list-style: none;
         position: relative;
         display: inline-block;
     }
 
-    .dropdown:hover .dropdown-content {
-        display: block;
-        flex-direction: column;
-        align-items: center;
+    .dropdown .dropbtn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
     }
 
     .dropdown-content {
         display: none;
-        list-style: none;
         position: absolute;
         top: 100%;
         left: 50%;
-        transform: translateX(-50%);
-        background-color: #333;
+        transform: translateX(-50%); /* Centers the dropdown */
+        background-color: rgba(51, 51, 51, 0.9); /* Semi-transparent background */
         width: 60px;
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
         z-index: 1;
-        border-radius: 2px;
+        border-radius: 8px; /* Rounded corners */
         text-align: center;
+        padding: 5px 0;
+        backdrop-filter: blur(5px); /* Applies blur effect to the background */
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
     }
 
     .dropdown-content li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 12px 0;
-        background-color: transparent;
-        padding-right: 20px;
+        padding: 10px 0;
     }
 
-    .dropdown-content a {
+    .dropdown-content a, .dropdown-content button {
+        width: 100%;
+        background: transparent;
+        border: none;
         color: white;
-        padding: 0;
-        text-decoration: none;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        padding: 0;
     }
 
     .dropdown-content img {
         width: 30px;
         height: 20px;
-        display: block;
     }
 
-    .dropdown-content a:hover {
+    .dropdown-content a:hover, .dropdown-content button:hover {
         background-color: #575757;
     }
 </style>
