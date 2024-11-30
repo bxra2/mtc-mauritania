@@ -4,6 +4,8 @@
     ////
     import NavBar from './components/Navbar.svelte'
     import Hero from './components/Hero.svelte'
+    import Hero2 from './components/Hero2.svelte'
+    import Mission from './components/Mission.svelte'
     import History from './components/History.svelte'
     import Telecom from './components/Telecom.svelte'
     import OurPartners from './components/OurPartners.svelte'
@@ -12,7 +14,6 @@
     import Footerr from './components/Footerr.svelte'
     import Activities from './components/Activities.svelte'
     import Dialog from './components/Dialog.svelte'
-    import Card2 from './components/Card2.svelte'
     import WorldMap from './components/WorldMap.svelte'
     import Video from './components/Video.svelte'
     ///
@@ -24,9 +25,10 @@
 
 <main>
     <NavBar {currentLanguage} />
-    <Hero />
+    <Hero2 {currentLanguage} />
+    <Mission {currentLanguage} />
     <History {currentLanguage} />
-    <Video />
+    <Video {currentLanguage} />
     <Activities {currentLanguage} />
     <WorldMap />
     <OurPartners {currentLanguage} />

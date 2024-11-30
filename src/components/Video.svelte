@@ -1,3 +1,8 @@
+<script>
+    import { languages } from '../helpers/languages'
+    export let currentLanguage
+</script>
+
 <section
     class="cta-video-wrapper section-padding bg-cover"
     style="background-image: url('assets/img/home4/cta-bg.png')"
@@ -10,10 +15,7 @@
                 <div class="cta-contents-wrap">
                     <h1>MTC</h1>
                     <h3>
-                        Est le leader Marocain indépendant des services
-                        multi-techniques dans les domaines du systèmes de
-                        communication ,Génie civil ainsi que des services
-                        spécialisés liés à l'énergie.
+                        {languages[currentLanguage].video}
                     </h3>
                 </div>
             </div>

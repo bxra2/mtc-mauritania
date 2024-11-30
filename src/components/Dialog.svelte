@@ -1,5 +1,6 @@
 <script>
     let dialog // Bind the dialog element
+    export let dialogcontent, title
 
     // Function to open the modal
     function showModal() {
@@ -10,6 +11,8 @@
     function closeModal() {
         dialog.close() // Close the dialog
     }
+
+    console.log('dialogcontent', dialogcontent)
 </script>
 
 <!-- Button to trigger modal opening -->
@@ -19,41 +22,23 @@
 <dialog bind:this={dialog}>
     <div class="modal-content">
         <!-- Section 1: Title and Close Button -->
-        <div class="modal-section title">
-            <h2>Modal Title</h2>
-            <button on:click={closeModal} aria-label="close" class="x"
-                >❌</button
-            >
+        <div class="modal-section-header title">
+            <h2>{title}</h2>
+            <button on:click={closeModal} aria-label="close" class="x">
+                ❌
+            </button>
         </div>
+
+        <!-- Section: Description Loop -->
         <div class="modal-sections">
-            <!-- Section 2: Description -->
-            <div class="modal-section description">
-                <h3>Section 1</h3>
-                <p>
-                    This is the description of the first section. You can add
-                    more details here. The modal supports multiple sections,
-                    each with its own title and description.
-                </p>
-            </div>
-
-            <!-- Section 3: Another Description -->
-            <div class="modal-section description">
-                <h3>Section 2</h3>
-                <p>
-                    This is the description of the second section. You can add
-                    as many sections as you need, each with a title and
-                    description.
-                </p>
-            </div>
-
-            <!-- Section 4: Another Description -->
-            <div class="modal-section description">
-                <h3>Section 3</h3>
-                <p>
-                    This is the description of the third section. Each section
-                    is separated, and the title will always stay the same size.
-                </p>
-            </div>
+            {#each dialogcontent as section}
+                <div class="modal-section description">
+                    <h3>{section.title}</h3>
+                    {#each section.description as desc}
+                        <p>{desc}</p>
+                    {/each}
+                </div>
+            {/each}
         </div>
     </div>
 </dialog>
@@ -88,7 +73,7 @@
     dialog {
         padding: 1rem 3rem;
         background: white;
-        max-width: 1000px; /* Increased width to fit content better */
+        width: 80%;
         border-radius: 20px;
         border: 0;
         box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
@@ -98,40 +83,56 @@
         transform: translate(-50%, -50%);
         z-index: 1000;
         animation: fadeIn 1s ease both;
-        overflow-y: auto; /* Enable scrolling if content overflows */
+        overflow-y: auto;
     }
 
     .modal-content {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: space-around;
         height: 100%;
     }
+
+    /* Use CSS Grid for responsive sections */
     .modal-sections {
         display: flex;
-        flex-direction: row;
+        justify-content: center; /* Center all items horizontally */
+        align-items: center; /* Center all items vertically */
+        gap: 20px; /* Space between sections */
+        flex-wrap: wrap; /* Allow sections to wrap when there's too much space */
+        width: 100%; /* Ensure the container takes the full width */
     }
-    .modal-section {
+
+    .modal-section-header {
+        width: 100%;
         margin: 10px;
     }
 
-    .modal-section.title {
+    .modal-section {
+        flex: 1 1 250px; /* Allow sections to grow and shrink, with a minimum width of 250px */
         display: flex;
-        justify-content: center; /* Center the title horizontally */
-        align-items: center; /* Center the title vertically */
-        position: relative; /* For absolute positioning of the close button */
+        flex-direction: column;
+        align-items: center; /* Center content inside each section */
+        text-align: center; /* Center the text inside each section */
     }
 
-    .modal-section.title h2 {
+    .modal-section-header.title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .modal-section-header.title h2 {
         font-size: 1.8rem;
         font-weight: 600;
         margin: 0;
-        text-align: center; /* Ensure the title is centered */
+        text-align: center;
     }
 
-    /* Close button styling */
-    .modal-section.title .x {
-        position: absolute; /* Position it at the top-right */
+    .modal-section-header.title .x {
+        position: absolute;
         top: 2px;
         right: 10px;
         font-size: 1.5rem;
@@ -139,10 +140,6 @@
         background: none;
         border: none;
         cursor: pointer;
-    }
-
-    .modal-section.title .x:hover {
-        transform: scale(1.1);
     }
 
     .modal-section.description h3 {
@@ -155,10 +152,6 @@
         font-size: 1rem;
         line-height: 1.5;
         padding: 10px;
-    }
-
-    .modal-section.footer {
-        text-align: right;
     }
 
     /* Close button styling */

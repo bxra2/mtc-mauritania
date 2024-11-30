@@ -1,18 +1,19 @@
 <script>
-    import { partnerImages } from "../helpers/Routes";
+    import { partnerImages } from '../helpers/Routes'
     export let currentLanguage
 </script>
 
 <section id="partners">
-    <h1>Our Partners</h1>
+    <h2 class="text-5xl font-bold text-gray-900 text-center">Our Partners</h2>
     <div class="slider">
         <div class="slider-items">
             {#each partnerImages as { src, alt, id }}
-            <div class="partner">
-              <img src={src} alt={alt} />
-              <div class="hover-text">{alt}</div> <!-- Text to show on hover -->
-            </div>
-          {/each}
+                <div class="partner">
+                    <img {src} {alt} />
+                    <div class="hover-text">{alt}</div>
+                    <!-- Text to show on hover -->
+                </div>
+            {/each}
         </div>
     </div>
 </section>
@@ -40,7 +41,7 @@
         margin: 50px 0px;
     }
 
-    h1 {
+    h2 {
         font-size: 3rem;
         padding: 20px;
         margin: 20px 0px;
@@ -85,38 +86,38 @@
     }
 
     .partner {
-    position: relative;
-    width: 120px;
-    height: 120px;
-  }
+        position: relative;
+        width: 120px;
+        height: 120px;
+    }
 
-  .partner img {
-    width: 70%;
-    height: 70%;
-    object-fit: contain;
-    transition: opacity 0.3s;
-  }
+    .partner img {
+        width: 70%;
+        height: 70%;
+        object-fit: contain;
+        transition: opacity 0.3s;
+    }
 
-  .hover-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    background-color: rgba(18, 18, 18,.8);
-    color: white;
-    padding: 5px;
-    font-size: 14px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    border-radius: 5px;
-  }
+    .hover-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(18, 18, 18, 0.8);
+        color: white;
+        padding: 5px;
+        font-size: 14px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        border-radius: 5px;
+    }
 
-  .partner:hover .hover-text {
-    opacity: .8; /* Show text when hovering */
-  }
-  
-  .partner:hover img {
-    opacity: 1; /* Optionally reduce image opacity on hover */
-  }
+    .partner:hover .hover-text {
+        opacity: 0.8; /* Show text when hovering */
+    }
+
+    .partner:hover img {
+        opacity: 1; /* Optionally reduce image opacity on hover */
+    }
 </style>

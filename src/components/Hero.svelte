@@ -6,7 +6,6 @@
         <div class="hero-text">
             <div class="hero-text-left">
                 <h1>Ingénierie</h1>
-                <!-- <h4>Mouhamadou is here</h4> -->
             </div>
             <div class="hero-text-right">
                 <p>

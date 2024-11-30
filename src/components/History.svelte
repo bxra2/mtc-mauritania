@@ -4,16 +4,21 @@
     export let currentLanguage
 </script>
 
-<div id="history">
-    <h1>{languages[currentLanguage].ourHistory.title}</h1>
+<div id="history" >
+    <h2 class="text-5xl font-bold text-gray-900 text-center">
+        {languages[currentLanguage].ourHistory.title}
+    </h2>
     <br />
     <ul>
         <li style="--accent-color:#13538a">
             <div class="date">2023-2024</div>
             &emsp;
             <div class="descr">
-                Extension CA +4MDHS
-                <strong>UK Second Office & NY LLC Third Office</strong>
+                {languages[currentLanguage].ourHistory.points[2023]}
+                <strong
+                    >{languages[currentLanguage].ourHistory
+                        .points[2024]}</strong
+                >
             </div>
         </li>
         <li style="--accent-color:#1c88cf">
@@ -21,7 +26,7 @@
             &emsp;
             <br />
             <div class="descr">
-                Augmentation du Capital Augmentation de 69% CA = 2MDH
+                {languages[currentLanguage].ourHistory.points[2022]}
             </div>
         </li>
         <li style="--accent-color:#18afd6">
@@ -29,7 +34,7 @@
             &emsp;
             <br />
             <div class="descr">
-                Augmentation du capital Augmentation de 109%
+                {languages[currentLanguage].ourHistory.points[2021]}
             </div>
         </li>
         <li style="--accent-color:#37c9ef">
@@ -37,8 +42,7 @@
             &emsp;
             <br />
             <div class="descr">
-                Diversification des projets Entretien réseaux GSM-R ONCF, Fibre
-                Optique, Forage horizontaux
+                {languages[currentLanguage].ourHistory.points[2020]}
             </div>
         </li>
         <li style="--accent-color:#3edad8">
@@ -46,7 +50,7 @@
             &emsp;
             <br />
             <div class="descr">
-                Démarrage des activités Projet télécom GSM & Fibre optique
+                {languages[currentLanguage].ourHistory.points[2018]}
             </div>
         </li>
         <li style="--accent-color:#86eae9">
@@ -73,10 +77,6 @@
 
     #history {
         margin: 30px 0;
-    }
-
-    h1 {
-        text-align: center;
     }
 
     ul {

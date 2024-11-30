@@ -1,103 +1,121 @@
 <script>
-    export let title, desc, iconClasses
+    import { languages } from '../helpers/languages'
     import Dialog from './Dialog.svelte'
+    export let title, desc, iconClasses, dialogcontent
 </script>
 
-<div class="card">
-    <div class="ilustration">
-        <i class={`${iconClasses}`}></i>
-        <h3>{title}</h3>
+<div class="card-wrap">
+    <div class="card-header one">
+        <i class={iconClasses}></i>
     </div>
-    <ul>
-        {#each desc as item}
-            <br />
-            <li>{item}</li>
-        {/each}
-    </ul>
-    <Dialog />
+    <div class="card-content">
+        <h1 class="card-title">{title}</h1>
+        <p class="card-text">
+            {desc}
+        </p>
+        <button class="card-btn one"><Dialog {title} {dialogcontent} /></button>
+    </div>
 </div>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
-    /*5 Minutes Challenge*/
-    .card {
-        background-color: #eaeaea;
-        border-radius: 30px;
-        text-align: center;
-        padding: 15px;
-        max-width: 375px;
-        margin: 100px auto;
-        box-shadow:
-            20px 20px 20px #e6eaed,
-            -20px -20px 20px #f2f4f5;
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
     }
-    .card .ilustration {
-        margin: 20px;
-        border-radius: 30px;
-        background-color: #124c87;
+    :root {
+        --color-text: #616161;
+        --color-text-btn: #ffffff;
+        --card1-gradient-color1: #010509;
+        --card1-gradient-color2: #124c87;
+        --card2-gradient-color1: #7f00ff;
+        --card2-gradient-color2: #e100ff;
+        --card3-gradient-color1: #3f2b96;
+        --card3-gradient-color2: #a8c0ff;
+        --card4-gradient-color1: #11998e;
+        --card4-gradient-color2: #38ef7d;
+    }
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(to right, #8e9eab, #eef2f3);
+        height: 100vh;
         display: flex;
-        justify-content: center; /* Horizontal centering */
         align-items: center;
-        padding: 20px;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
     }
-    .card .ilustration i {
-        border-radius: 10%;
+    .card-wrap {
+        width: 300px;
+        margin: 20px;
+        background: #fff;
+        border-radius: 20px;
+        border: 5px solid #fff;
         overflow: hidden;
+        color: var(--color-text);
+        box-shadow:
+            rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        /* cursor: pointer; */
+        transition: all 0.2s ease-in-out;
+    }
+    /* .card-wrap:hover {
+        transform: scale(1.1);
+    } */
+    .card-header {
+        height: 180px;
+        width: 100%;
+        background: red;
+        border-radius: 100% 0% 100% 0% / 0% 50% 50% 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    .card-header i {
+        color: #fff;
+        font-size: 72px;
+    }
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        margin: 0 auto;
+    }
+    .card-title {
         text-align: center;
-        color: #f2f4f5;
-        margin: auto;
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
-    .card h3 {
-        font-family: 'Fredoka', sans-serif;
-        font-size: 2rem;
-        line-height: 2.2rem;
-        color: #1d2428;
-        font-weight: bold;
-        margin: 30px 0;
-    }
-    .card p {
-        font-family: 'Fredoka', sans-serif;
-        font-size: 1rem;
-        line-height: 1.3rem;
-        color: #5e7280;
-        margin: 30px auto;
-        max-width: 80%;
-    }
-    .card button {
-        font-family: 'Fredoka', sans-serif;
-        font-size: 1.1rem;
-        font-weight: bold;
-        padding: 15px 80px;
-        border-radius: 25px;
-        color: white;
-        border: 0;
-        margin: 30px 0;
-        outline: none;
-        background-color: #143c64;
-        box-shadow:
-            10px 10px 10px rgba(122, 196, 125, 0.2),
-            -10px -10px 10px rgba(136, 202, 139, 0.2);
-        transition: ease all 0.3s;
-        cursor: pointer;
-    }
-    .card button:hover {
-        box-shadow:
-            20px 20px 20px rgba(122, 196, 125, 0.1),
-            -20px -20px 20px rgba(136, 202, 139, 0.1);
-        transform: translateY(-3px);
-    }
-    .card button:active {
-        transform: scale(0.9);
-        box-shadow:
-            inset -1px -1px 3px rgba(122, 196, 125, 0.3),
-            -20px -20px 20px rgba(136, 202, 139, 0);
-    }
-    ul {
-        padding: 0;
-    }
-    li {
-        list-style: none;
+    .card-text {
         text-align: center;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .card-btn {
+        border: none;
+        border-radius: 100px;
+        padding: 5px 30px;
+        color: #fff;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+    .card-header.one {
+        background: linear-gradient(
+            to bottom left,
+            var(--card1-gradient-color1),
+            var(--card1-gradient-color2)
+        );
+    }
+
+    .card-btn.one {
+        background: linear-gradient(
+            to left,
+            var(--card1-gradient-color1),
+            var(--card1-gradient-color2)
+        );
     }
 </style>
