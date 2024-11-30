@@ -64,22 +64,20 @@
 </div>
 
 <style>
-    /* Container for the layout */
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 20px;
-        height: 70vh; /* Use full viewport height */
-        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        height: 70vh;
+        flex-wrap: wrap;
     }
 
-    /* Left section with title and list */
     .left-section {
         max-width: 500px;
         margin-right: 50px;
-        flex: 1; /* Ensure it takes up space, but doesn't stretch */
-        margin-bottom: 20px; /* Add margin on smaller screens */
+        flex: 1;
+        margin-bottom: 20px;
     }
 
     .left-section h1 {
@@ -97,7 +95,6 @@
         margin: 10px;
     }
 
-    /* Right section with the map container */
     .right-section {
         flex-grow: 1;
         display: flex;
@@ -108,7 +105,6 @@
         max-width: 800px;
     }
 
-    /* Map container and image styling */
     .map-container {
         position: relative;
         display: flex;
@@ -123,14 +119,12 @@
         height: auto;
     }
 
-    /* Pin styling */
     .pin {
         position: absolute;
         font-size: 24px;
         transform: translate(-50%, -50%);
     }
 
-    /* Keymap styling */
     .keymap {
         width: 100%;
         margin-top: 20px;
@@ -158,11 +152,10 @@
         padding-right: 10px;
     }
 
-    /* Responsive design adjustments */
     @media (max-width: 768px) {
         .container {
             flex-direction: column;
-            height: auto; /* Allow height to adjust on small screens */
+            height: auto;
         }
 
         .left-section {

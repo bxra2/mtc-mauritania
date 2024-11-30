@@ -1,161 +1,283 @@
 <script>
+    import { logo } from '../helpers/Routes'
+
     import { languages } from '../helpers/languages'
     export let currentLanguage
 </script>
 
-<footer id="contactme" class="footer">
+<footer id="contact" class="footer-section">
     <div class="container">
-        <div class="footer__columns">
-            <div class="footer__col">
-                <h3 class="footer__col-title">
-                    <i data-feather="shopping-bag"></i> <span>La boutique</span>
-                </h3>
-                <nav class="footer__nav">
-                    <ul class="footer__nav-list">
-                        <li class="footer__nav-item">
-                            <a href="" class="footer__nav-link">
-                                Mentions légales
-                            </a>
-                        </li>
-                        <li class="footer__nav-item">
-                            <a href="" class="footer__nav-link">
-                                Politique de confidentialité
-                            </a>
-                        </li>
-                        <li class="footer__nav-item">
-                            <a href="" class="footer__nav-link"> CGV </a>
-                        </li>
-                        <li class="footer__nav-item">
-                            <a href="" class="footer__nav-link">
-                                Livraisons et retours
-                            </a>
-                        </li>
-                        <li class="footer__nav-item">
-                            <a href="" class="footer__nav-link">
-                                Règlement concours
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer__col">
-                <h3 class="footer__col-title">
-                    <i data-feather="share-2"></i>
-                    <span>{languages[currentLanguage].footer.followUs}</span>
-                </h3>
-                <nav class="footer__nav">
-                    <ul class="footer__nav-list">
-                        <li class="footer__nav-item">
-                            <a
-                                href="https://www.linkedin.com/company/multiservice-telecom-company/"
-                                class="footer__nav-link"
-                            >
-                                <i data-feather="linkedin"></i><span
-                                    >Linkedin</span
-                                >
-                            </a>
-                        </li>
-                        <li class="footer__nav-item">
-                            <a
-                                href="https://www.facebook.com/multiservicetelecomcompany/"
-                                class="footer__nav-link"
-                            >
-                                <i data-feather="facebook"></i><span
-                                    >Facebook</span
-                                >
-                            </a>
-                        </li>
-                        <li class="footer__nav-item">
-                            <a
-                                href="https://www.instagram.com/multiservice_telecom_company/"
-                                class="footer__nav-link"
-                            >
-                                <i data-feather="instagram"></i><span
-                                    >Instagram</span
-                                >
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer__col">
-                <h3 class="footer__col-title">
-                    <i data-feather="send"></i> <span>Contact</span>
-                </h3>
-                <nav class="footer__nav">
-                    <ul class="footer__nav-list">
-                        <li class="footer__nav-item">
-                            <a
-                                href="contact@mtc-maroc.com"
-                                class="footer__nav-link"
-                            >
-                                contact@mtc-maroc.com
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Find us</h4>
+                            <span>1010 Avenue, sw 54321, chandigarh</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span>9876543210 0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Mail us</h4>
+                            <span>mail@info.com</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="footer__copyrights">
-            <p>2022 MTC-MAROC. All Rights Reserved</p>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-8 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html"
+                                ><img
+                                    src={logo}
+                                    class="img-fluid"
+                                    alt="logo"
+                                /></a
+                            >
+                        </div>
+                        <div class="footer-text">
+                            <p>
+                                Est le leader Marocain indépendant des services
+                                multi-techniques
+                            </p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span
+                                >{languages[currentLanguage].footer
+                                    .followUs}</span
+                            >
+                            <a
+                                href="https://www.facebook.com/multiservicetelecomcompany/"
+                                ><i class="fab fa-facebook-f"></i></a
+                            >
+                            <a
+                                href="https://www.instagram.com/multiservice_telecom_company/"
+                                ><i class="fab fa-instagram"></i></a
+                            >
+                            <a
+                                href="https://www.linkedin.com/company/multiservice-telecom-company/"
+                                ><i class="fab fa-linkedin"></i></a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Sections</h3>
+                        </div>
+                        <ul>
+                            <li><a href="#">{languages[currentLanguage].navbar.home} </a></li>
+                            <li><a href="#mission">{languages[currentLanguage].navbar.mission}</a></li>
+                            <li><a href="#history">{languages[currentLanguage].navbar.history} </a></li>
+                            <li><a href="#activities">{languages[currentLanguage].navbar.activity}</a></li>
+                            <li><a href="#partners">{languages[currentLanguage].navbar.partners}</a></li>
+                            <li><a href="#contact">{languages[currentLanguage].navbar.contact} </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2024, All Rights Reserved</p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Policy</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
-
-    .footer {
+    ul {
+        margin: 0px;
+        padding: 0px;
+    }
+    .footer-section {
+        background: #151414;
         position: relative;
-        margin-top: 300px;
-        padding: 3rem 0;
-        color: #fff;
-        background: #124c87;
-        margin-top: 70px;
     }
-
-    .container {
+    .footer-cta {
+        border-bottom: 1px solid #373636;
+    }
+    .single-cta i {
+        color: #064888;
+        font-size: 30px;
+        float: left;
+        margin-top: 8px;
+    }
+    .cta-text {
+        padding-left: 15px;
+        display: inline-block;
+    }
+    .cta-text h4 {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 2px;
+    }
+    .cta-text span {
+        color: #757575;
+        font-size: 15px;
+    }
+    .footer-content {
+        position: relative;
+        z-index: 2;
+    }
+    .footer-pattern img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 330px;
+        background-size: cover;
+        background-position: 100% 100%;
+    }
+    .footer-logo {
+        margin-bottom: 30px;
+    }
+    .footer-logo img {
+        max-width: 200px;
+    }
+    .footer-text p {
+        margin-bottom: 14px;
+        font-size: 14px;
+        color: #7e7e7e;
+        line-height: 28px;
+    }
+    .footer-social-icon span {
+        color: #fff;
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 20px;
+    }
+    .footer-social-icon a {
+        color: #fff;
+        font-size: 16px;
+        margin-right: 15px;
+    }
+    .footer-social-icon i {
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: 38px;
+        border-radius: 50%;
+    }
+    .facebook-bg {
+        background: #3b5998;
+    }
+    .twitter-bg {
+        background: #55acee;
+    }
+    .google-bg {
+        background: #dd4b39;
+    }
+    .footer-widget-heading h3 {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    .footer-widget-heading h3::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        height: 2px;
+        width: 50px;
+        background: #064888;
+    }
+    .footer-widget ul li {
+        display: inline-block;
+        float: left;
+        width: 50%;
+        margin-bottom: 12px;
+    }
+    .footer-widget ul li a:hover {
+        color: #064888;
+    }
+    .footer-widget ul li a {
+        color: #878787;
+        text-transform: capitalize;
+    }
+    .subscribe-form {
+        position: relative;
+        overflow: hidden;
+    }
+    .subscribe-form input {
         width: 100%;
-        max-width: 1600px;
-        margin: 0 auto;
-    }
-    .footer__columns {
-        display: flex;
-        justify-content: space-between;
-    }
-    .footer__col-title {
-        font-size: 1.6rem;
-        margin-bottom: 2rem;
-        text-transform: uppercase;
-        display: flex;
-        align-items: center;
-    }
-    .footer__col-title * ~ span {
-        margin-left: 1rem;
-    }
-    .footer a {
-        display: flex;
-        align-items: center;
+        padding: 14px 28px;
+        background: #2e2e2e;
+        border: 1px solid #2e2e2e;
         color: #fff;
-        text-decoration: none;
     }
-    .footer a * ~ span {
-        margin-left: 1rem;
+    .subscribe-form button {
+        position: absolute;
+        right: 0;
+        background: #064888;
+        padding: 13px 20px;
+        border: 1px solid #064888;
+        top: 0;
     }
-    .footer__nav-list {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
+    .subscribe-form button i {
+        color: #fff;
+        font-size: 22px;
+        transform: rotate(-6deg);
     }
-    .footer__copyrights {
-        padding-top: 3rem;
-        margin-top: 3rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    .copyright-area {
+        background: #202020;
+        padding: 25px 0;
     }
-    .footer__copyrights p {
-        display: flex;
+    .copyright-text p {
+        margin: 0;
+        font-size: 14px;
+        color: #878787;
     }
-    .footer__copyrights p a {
-        margin-left: 0.5rem;
+    .copyright-text p a {
+        color: #064888;
+    }
+    .footer-menu li {
+        display: inline-block;
+        margin-left: 20px;
+    }
+    .footer-menu li:hover a {
+        color: #064888;
+    }
+    .footer-menu li a {
+        font-size: 14px;
+        color: #878787;
     }
 </style>

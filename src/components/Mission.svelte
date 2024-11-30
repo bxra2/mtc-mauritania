@@ -3,7 +3,7 @@
     export let currentLanguage
 </script>
 
-<section class="bg-[#eee] py-20">
+<section id="mission" class="bg-[#eee] py-20">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-5xl font-bold text-gray-900 text-center">
             {languages[currentLanguage].ourMission.title}

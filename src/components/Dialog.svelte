@@ -94,14 +94,13 @@
         height: 100%;
     }
 
-    /* Use CSS Grid for responsive sections */
     .modal-sections {
         display: flex;
-        justify-content: center; /* Center all items horizontally */
-        align-items: center; /* Center all items vertically */
-        gap: 20px; /* Space between sections */
-        flex-wrap: wrap; /* Allow sections to wrap when there's too much space */
-        width: 100%; /* Ensure the container takes the full width */
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        width: 100%;
     }
 
     .modal-section-header {
@@ -110,11 +109,11 @@
     }
 
     .modal-section {
-        flex: 1 1 250px; /* Allow sections to grow and shrink, with a minimum width of 250px */
+        flex: 1 1 250px;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center content inside each section */
-        text-align: center; /* Center the text inside each section */
+        align-items: center;
+        text-align: center;
     }
 
     .modal-section-header.title {
@@ -154,7 +153,6 @@
         padding: 10px;
     }
 
-    /* Close button styling */
     .x {
         border: none;
         background: none;
@@ -168,7 +166,6 @@
         transform: scale(1.1);
     }
 
-    /* Animation for fade-in */
     @keyframes fadeIn {
         from {
             opacity: 0;

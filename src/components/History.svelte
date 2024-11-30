@@ -4,7 +4,7 @@
     export let currentLanguage
 </script>
 
-<div id="history" >
+<div id="history">
     <h2 class="text-5xl font-bold text-gray-900 text-center">
         {languages[currentLanguage].ourHistory.title}
     </h2>
@@ -92,7 +92,6 @@
         margin-inline: auto;
     }
 
-    /* line */
     ul::before {
         content: '';
         grid-column: 1;
@@ -101,14 +100,10 @@
         border-radius: calc(var(--line-w) / 2);
     }
 
-    /* columns*/
-
-    /* row gaps */
     ul li:not(:last-child) {
         margin-bottom: var(--row-gap);
     }
 
-    /* card */
     ul li {
         grid-column: 2;
         --inlineP: 1.5rem;
@@ -120,7 +115,6 @@
         grid-template-rows: min-content min-content min-content;
     }
 
-    /* date */
     ul li .date {
         --dateH: 3rem;
         height: var(--dateH);
@@ -140,7 +134,6 @@
         border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
     }
 
-    /* date flap */
     ul li .date::before {
         content: '';
         width: var(--inlineP);
@@ -154,7 +147,6 @@
         right: 0;
     }
 
-    /* circle */
     ul li .date::after {
         content: '';
         position: absolute;
@@ -169,7 +161,6 @@
         right: calc(100% + var(--col-gap) + var(--line-w) / 2);
     }
 
-    /* title descr */
     ul li .title,
     ul li .descr {
         background: #fff;
@@ -188,7 +179,6 @@
         font-weight: 300;
     }
 
-    /* shadows */
     ul li .title::before,
     ul li .descr::before {
         content: '';
@@ -224,7 +214,6 @@
             grid-column: 3;
         }
 
-        /* start second card */
         ul li:nth-child(2) {
             grid-row: 2/4;
         }

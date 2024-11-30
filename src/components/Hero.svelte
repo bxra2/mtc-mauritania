@@ -1,177 +1,77 @@
-<div class="hero-background">
-    <div class="background"></div>
+<script>
+    import { languages } from '../helpers/languages'
+    export let currentLanguage
+</script>
 
-    <div class="overlay"></div>
-    <div class="hero-section">
-        <div class="hero-text">
-            <div class="hero-text-left">
-                <h1>Ingénierie</h1>
-            </div>
-            <div class="hero-text-right">
-                <p>
-                    Nous sommes l'une des principales sociétés de services et de
-                    solutions d'ingénierie de bout en bout offrant une valeur
-                    commerciale tout au long du cycle de vie du projet.
+<section class="">
+    <div
+        class="bg-[#151414] text-white h-[92vh] element flex items-center justify-center"
+    >
+        <div
+            class="container flex flex-col md:flex-row items-center my-16 md:my-20"
+        >
+            <div
+                class="flex flex-col w-full lg:w-1/3 justify-center items-start p-10"
+            >
+                <h1 class="text-4xl md:text-7xl text-[#064888] tracking-loose">
+                    MTC
+                </h1>
+                <h2
+                    class="text-4xl md:text-5xl leading-relaxed md:leading-snug mb-4"
+                >
+                    {languages[currentLanguage].hero.title}
+                </h2>
+                <p class="text-lg md:text-xl text-gray-50 mb-6">
+                    {languages[currentLanguage].hero.description}
                 </p>
+                <a
+                    href="#contact"
+                    class="bg-transparent hover:bg-[#064888] text-[#064888] hover:text-white rounded shadow hover:shadow-lg py-3 px-6 border border-[#064888] hover:border-transparent"
+                >
+                    Contact Us
+                </a>
+            </div>
+            <div
+                class="p-10 mt-16 mb-8 md:mb-0 md:mt-0 ml-0 md:ml-16 lg:w-2/3 justify-center"
+            >
+                <div class="h-56 flex flex-wrap content-center">
+                    <div>
+                        <img
+                            class="inline-block mt-32 hidden xl:block"
+                            style="width: 220px; border-radius: 8px;"
+                            src="http://localhost:5173/images/LINK.png"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            class="inline-block mt-32 md:mt-0 p-8 md:p-0"
+                            style="width: 420px; border-radius: 8px; padding:20px"
+                            src="http://localhost:5173/images/prj1.png"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            class="inline-block mt-32 hidden lg:block"
+                            style="width: 220px; border-radius: 8px;"
+                            src="http://localhost:5173/images/GSM.png"
+                        />
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <style>
-    .hero-section {
-        height: 92dvh;
-    }
-    .hero-background {
-        position: relative; /* Position relative to ensure child elements are properly positioned */
-        height: 92dvh; /* 92% of the viewport height */
-    }
-
-    @media only screen and (min-width: 1200px) {
-        .hero-background {
-            background-position: 0px -120px;
-        }
-    }
-
-    .hero-background .background {
-        position: absolute; /* Position it relative to the hero-background container */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('../../public/01.png');
-        background-size: cover;
-        background-position: center;
-        filter: blur(5px); /* Apply filter to the background only */
-    }
-
-    /* Dark overlay on top of the background */
-    .hero-background .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
-    }
-
-    .hero-text {
-        width: 90%;
-        display: flex;
-        align-items: center;
-        height: 100%;
-        justify-content: space-between;
-        margin: 0 auto;
-        animation: slideUp 0.9s linear forwards;
-    }
-
-    .hero-text-left {
-        width: 40%;
-        margin-left: 30px;
-    }
-
-    .hero-text-right {
-        width: 40%;
-        margin-right: 30px;
-    }
-
-    .hero-text h1 {
-        font-size: 3.5rem;
-        margin-bottom: 12px;
-        color: #c29d4a;
-    }
-    .hero-text h4 {
-        font-size: 1.5rem;
-        color: #fff;
-    }
-
-    .hero-text p {
-        font-size: 1.5rem;
-        margin-bottom: 12px;
-        color: #fff;
-    }
-
-    .book-now {
-        padding: 1em 2.1em 1.1em;
-        border-radius: 4px;
-        margin: 8px;
-        border: none;
-        border-radius: 10px;
-        background-color: #0e0e0e;
-        color: #dbd8cf;
-        font-weight: 800;
-        font-size: 0.85em;
-        text-transform: uppercase;
-        text-align: center;
-        /* box-shadow: 0em -0.2rem 0em #7f591c inset; */
-        transition: color 3s ease-in-out;
-    }
-
-    .book-now:hover {
-        /* /* background-color: transparent;
-    color: #8b4513;
-    border: 3px solid #7f591c; */
-        cursor: pointer;
-    }
-
-    /* Media queries */
-
-    @media (min-width: 800px) {
-        .book-now {
-            display: none;
-        }
-    }
-
-    @media (max-width: 884px) {
-        .container {
-            margin-top: 10px;
-            flex-direction: column;
-        }
-        .hero-text {
-            width: 100%;
-            text-align: center;
-        }
-        .hero-text h1 {
-            font-size: 3rem;
-        }
-    }
-
-    @media (max-width: 678px) {
-        .hero-text h1 {
-            font-size: 2rem;
-        }
-    }
-    @media (max-width: 480px) {
-        nav ul {
-            display: none;
-        }
-        .hero-text {
-            flex-direction: column;
-            justify-content: flex-end;
-        }
-        .hero-text-left {
-            width: 90%;
-            margin-left: 0px;
-        }
-
-        .hero-text-right {
-            width: 90%;
-            margin-right: 0px;
-            margin-bottom: 40px;
-        }
-        .hero-text-right p {
-            font-size: 1.2rem;
-        }
-    }
-
-    @keyframes slideUp {
-        0% {
-            opacity: 0;
-            transform: translateY(50px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    .element {
+        background: #151414;
+        background-image: linear-gradient(
+                45deg,
+                rgba(0, 0, 0, 0.1) 25%,
+                transparent 25%
+            ),
+            linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%);
+        background-size: 10px 10px;
+        background-blend-mode: multiply;
     }
 </style>

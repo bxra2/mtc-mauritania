@@ -114,10 +114,10 @@
     }
 
     .partner:hover .hover-text {
-        opacity: 0.8; /* Show text when hovering */
+        opacity: 0.8;
     }
 
     .partner:hover img {
-        opacity: 1; /* Optionally reduce image opacity on hover */
+        opacity: 1;
     }
 </style>

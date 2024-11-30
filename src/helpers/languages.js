@@ -5,6 +5,7 @@ export const languages = {
         greeting: 'Hello',
         navbar: {
             home: 'Home',
+            mission:'Mission',
             history: 'History',
             activity: 'Area of Activity',
             partners: 'Partners',
@@ -144,6 +145,7 @@ export const languages = {
         greeting: 'Bonjour',
         navbar: {
             home: 'Home',
+            mission:'Mission',
             history: 'Histoire',
             activity: "Domaine d'activité",
             partners: 'Partners',
