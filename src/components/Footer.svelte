@@ -83,12 +83,39 @@
                             <h3>Sections</h3>
                         </div>
                         <ul>
-                            <li><a href="#">{languages[currentLanguage].navbar.home} </a></li>
-                            <li><a href="#mission">{languages[currentLanguage].navbar.mission}</a></li>
-                            <li><a href="#history">{languages[currentLanguage].navbar.history} </a></li>
-                            <li><a href="#activities">{languages[currentLanguage].navbar.activity}</a></li>
-                            <li><a href="#partners">{languages[currentLanguage].navbar.partners}</a></li>
-                            <li><a href="#contact">{languages[currentLanguage].navbar.contact} </a></li>
+                            <li>
+                                <a href="#"
+                                    >{languages[currentLanguage].navbar.home}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#mission"
+                                    >{languages[currentLanguage].navbar
+                                        .mission}</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#history"
+                                    >{languages[currentLanguage].navbar.history}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#activities"
+                                    >{languages[currentLanguage].navbar
+                                        .activity}</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#partners"
+                                    >{languages[currentLanguage].navbar
+                                        .partners}</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#contact"
+                                    >{languages[currentLanguage].navbar.contact}
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -98,22 +125,9 @@
     <div class="copyright-area">
         <div class="container">
             <div class="row">
-                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
                     <div class="copyright-text">
                         <p>Copyright &copy; 2024, All Rights Reserved</p>
                     </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-                    <div class="footer-menu">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Terms</a></li>
-                            <li><a href="#">Privacy</a></li>
-                            <li><a href="#">Policy</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -155,14 +169,6 @@
         position: relative;
         z-index: 2;
     }
-    .footer-pattern img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 330px;
-        background-size: cover;
-        background-position: 100% 100%;
-    }
     .footer-logo {
         margin-bottom: 30px;
     }
@@ -195,15 +201,6 @@
         line-height: 38px;
         border-radius: 50%;
     }
-    .facebook-bg {
-        background: #3b5998;
-    }
-    .twitter-bg {
-        background: #55acee;
-    }
-    .google-bg {
-        background: #dd4b39;
-    }
     .footer-widget-heading h3 {
         color: #fff;
         font-size: 20px;
@@ -233,30 +230,6 @@
         color: #878787;
         text-transform: capitalize;
     }
-    .subscribe-form {
-        position: relative;
-        overflow: hidden;
-    }
-    .subscribe-form input {
-        width: 100%;
-        padding: 14px 28px;
-        background: #2e2e2e;
-        border: 1px solid #2e2e2e;
-        color: #fff;
-    }
-    .subscribe-form button {
-        position: absolute;
-        right: 0;
-        background: #064888;
-        padding: 13px 20px;
-        border: 1px solid #064888;
-        top: 0;
-    }
-    .subscribe-form button i {
-        color: #fff;
-        font-size: 22px;
-        transform: rotate(-6deg);
-    }
     .copyright-area {
         background: #202020;
         padding: 25px 0;
@@ -266,18 +239,5 @@
         font-size: 14px;
         color: #878787;
     }
-    .copyright-text p a {
-        color: #064888;
-    }
-    .footer-menu li {
-        display: inline-block;
-        margin-left: 20px;
-    }
-    .footer-menu li:hover a {
-        color: #064888;
-    }
-    .footer-menu li a {
-        font-size: 14px;
-        color: #878787;
-    }
+
 </style>
