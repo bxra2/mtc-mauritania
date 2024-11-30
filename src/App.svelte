@@ -28,7 +28,7 @@
     <History {currentLanguage} />
     <Video {currentLanguage} />
     <Activities {currentLanguage} />
-    <WorldMap />
+    <WorldMap {currentLanguage}/>
     <OurPartners {currentLanguage} />
     <Progress />
     <Footer {currentLanguage} />

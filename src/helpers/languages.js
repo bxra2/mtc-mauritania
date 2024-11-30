@@ -5,7 +5,7 @@ export const languages = {
         greeting: 'Hello',
         navbar: {
             home: 'Home',
-            mission:'Mission',
+            mission: 'Mission',
             history: 'History',
             activity: 'Area of Activity',
             partners: 'Partners',
@@ -134,6 +134,15 @@ export const languages = {
                 ],
             },
         ],
+        presenceInTheWorld: {
+            title: 'PRESENCE AROUND THE WORLD',
+            details: [
+                'SECONDARY OFFICE IN THE UNITED KINGDOM LAUNCHING THE IT DEPARTMENT',
+                'THIRD LLC OFFICE IN NEW YORK COMING SOON',
+                'OFFICE IN ITALY COMING SOON',
+            ],
+        },
+
         footer: {
             followUs: 'FOLLOW US',
         },
@@ -145,7 +154,7 @@ export const languages = {
         greeting: 'Bonjour',
         navbar: {
             home: 'Home',
-            mission:'Mission',
+            mission: 'Mission',
             history: 'Histoire',
             activity: "Domaine d'activité",
             partners: 'Partners',
@@ -276,6 +285,15 @@ export const languages = {
                 ],
             },
         ],
+        presenceInTheWorld: {
+            title: 'PRÉSENCE DANS LE MONDE',
+            details: [
+                'BUREAU SECONDAIRE AU ROYAUME-UNI DÉMARRAGE DU DÉPARTEMENT INFORMATIQUE',
+                'TROISIÈME BUREAU LLC À NEW YORK À VENIR BIENTÔT',
+                'BUREAU EN ITALIE À VENIR BIENTÔT',
+            ],
+        },
+
         footer: {
             followUs: 'SUIVEZ-NOUS',
         },

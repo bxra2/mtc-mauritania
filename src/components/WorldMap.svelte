@@ -1,14 +1,15 @@
+<script>
+    import { languages } from '../helpers/languages'
+    export let currentLanguage
+</script>
+
 <div class="container">
-    <!-- Left Section (Title and List) -->
     <div class="left-section">
-        <h1>PRÉSENCE DANS LE MONDE</h1>
+        <h1>{languages[currentLanguage].presenceInTheWorld.title}</h1>
         <ul>
-            <li>
-                BUREAU SECONDAIRE AU ROYAUME-UNI DÉMARRAGE DU DÉPARTEMENT
-                INFORMATIQUE
-            </li>
-            <li>TROISIÈME BUREAU LLC À NEW YORK À VENIR BIENTÔT</li>
-            <li>BUREAU EN ITALIE À VENIR BIENTÔT</li>
+            {#each languages[currentLanguage].presenceInTheWorld.details as detail}
+                <li>{detail}</li>
+            {/each}
         </ul>
     </div>
 
