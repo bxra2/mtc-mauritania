@@ -14,7 +14,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <div class="cta-text">
                             <h4>Find us</h4>
-                            <span>1010 Avenue, sw 54321, chandigarh</span>
+                            <span>NOT N°0053-Tevragh-Zeina Sud-Nouakchott - Mauritania</span>
                         </div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                         <i class="fas fa-phone"></i>
                         <div class="cta-text">
                             <h4>Call us</h4>
-                            <span>9876543210 0</span>
+                            <span>+22232295588</span>
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                         <i class="far fa-envelope-open"></i>
                         <div class="cta-text">
                             <h4>Mail us</h4>
-                            <span>mail@info.com</span>
+                            <span>info@mtc-mauritania.com</span>
                         </div>
                     </div>
                 </div>

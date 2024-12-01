@@ -86,13 +86,13 @@
     .card-title {
         text-align: center;
         text-transform: uppercase;
-        font-size: 16px;
+        font-size: 18px;
         margin-top: 10px;
         margin-bottom: 20px;
     }
     .card-text {
         text-align: center;
-        font-size: 12px;
+        font-size: 14px;
         margin-bottom: 20px;
     }
     .card-btn {

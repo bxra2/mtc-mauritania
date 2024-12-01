@@ -13,7 +13,6 @@
                 class="col-lg-8 col-12 mt-5 mt-lg-0 order-2 order-lg-1 text-center text-white text-lg-left"
             >
                 <div class="cta-contents-wrap">
-                    <h1>MTC</h1>
                     <h3>
                         {languages[currentLanguage].video}
                     </h3>
