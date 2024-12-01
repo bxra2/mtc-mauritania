@@ -46,3 +46,5 @@ export const logo = `${baseUrl}/logo.png`
 export const whitelogo = `${baseUrl}/logo.png`
 export const favicon = `${baseUrl}/images/favicon.ico`
 export const background = `${baseUrl}/kh.png`
+export const worldMap = `${baseUrl}/worldmap.png`
+

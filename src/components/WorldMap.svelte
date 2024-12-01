@@ -1,6 +1,7 @@
 <script>
     import { languages } from '../helpers/languages'
     export let currentLanguage
+    import { worldMap } from '../helpers/Routes';
 </script>
 
 <div class="container">
@@ -16,7 +17,7 @@
     <div class="right-section">
         <div class="map-container">
             <img
-                src="http://localhost:5173/worldmap.png"
+                src={worldMap}
                 alt="World Map"
                 class="map"
             />
