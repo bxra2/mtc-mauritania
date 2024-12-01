@@ -1,6 +1,7 @@
 <script>
     import { languages } from '../helpers/languages'
     export let currentLanguage
+    import { heroImages } from '../helpers/Routes';
 </script>
 
 <section class="">
@@ -37,15 +38,15 @@
                             alt="link"
                             class="inline-block mt-32 hidden xl:block"
                             style="width: 220px; border-radius: 8px;"
-                            src="http://localhost:5173/images/LINK.png"
+                            src={heroImages.link}
                         />
                     </div>
                     <div>
                         <img
                             alt=""
                             class="inline-block mt-32 md:mt-0 p-8 md:p-0"
-                            style="width: 420px; border-radius: 8px; padding:20px"
-                            src="http://localhost:5173/images/prj1.png"
+                            style="width: 420px; border-radius: 30px; padding:20px"
+                            src={heroImages.prj1}
                         />
                     </div>
                     <div>
@@ -53,7 +54,7 @@
                             alt="gsm"
                             class="inline-block mt-32 hidden lg:block"
                             style="width: 220px; border-radius: 8px;"
-                            src="http://localhost:5173/images/GSM.png"
+                            src={heroImages.GSM}
                         />
                     </div>
                 </div>

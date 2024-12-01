@@ -1,7 +1,8 @@
-// Base URL for your images
-const baseUrl = 'http://localhost:5173'
+// Get the current host (e.g., 'localhost:5173' or 'example.com')
+const host = window.location.host
 
-// Define image paths and export them, starting with the base URL
+// Set the baseUrl dynamically based on the host
+const baseUrl = window.location.protocol + '//' + host
 export const partnerImages = [
     {
         id: 1,
@@ -19,7 +20,7 @@ export const partnerImages = [
     { id: 6, src: `${baseUrl}/images/partners/partner6.png`, alt: 'Site' },
     { id: 7, src: `${baseUrl}/images/partners/partner7.png`, alt: 'Camusat' },
     { id: 8, src: `${baseUrl}/images/partners/partner8.png`, alt: '3G COM' },
-    { id: 9, src: `${baseUrl}/images/partners/partner9.png`, alt: 'Star' },
+    { id: 9, src: `${baseUrl}/images/partners/partner9.png`, alt: 'Al Aoula' },
     {
         id: 10,
         src: `${baseUrl}/images/partners/partner10.png`,
@@ -28,7 +29,7 @@ export const partnerImages = [
     {
         id: 11,
         src: `${baseUrl}/images/partners/partner11.png`,
-        alt: 'Chess',
+        alt: 'Proelite Talent Partners',
     },
     {
         id: 12,
@@ -36,7 +37,11 @@ export const partnerImages = [
         alt: 'Nexa Globe',
     },
 ]
-
+export const heroImages = {
+    link: `${baseUrl}/images/LINK.png`,
+    prj1: `${baseUrl}/images/prj1.png`,
+    GSM: `${baseUrl}/images/GSM.png`,
+}
 export const logo = `${baseUrl}/logo.png`
 export const whitelogo = `${baseUrl}/logo.png`
 export const favicon = `${baseUrl}/images/favicon.ico`
