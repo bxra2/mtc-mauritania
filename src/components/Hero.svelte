@@ -24,10 +24,7 @@
                 <p class="text-lg md:text-xl text-gray-50 mb-6">
                     {languages[currentLanguage].hero.description}
                 </p>
-                <a
-                    href="#contact"
-                    class="bg-transparent hover:bg-[#064888] text-[#064888] hover:text-white rounded shadow hover:shadow-lg py-3 px-6 border border-[#064888] hover:border-transparent"
-                >
+                <a href="#contact" class="bg-[#064888] hover:bg-[#053c63] text-white hover:text-white rounded shadow hover:shadow-lg py-3 px-6 transition ease-in-out duration-300">
                     Contact Us
                 </a>
             </div>
