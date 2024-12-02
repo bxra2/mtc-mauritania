@@ -71,7 +71,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 20px;
-        height: 70vh;
+        min-height: 70vh;
         flex-wrap: wrap;
     }
 
