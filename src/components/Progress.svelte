@@ -1,13 +1,14 @@
 <script>
     import { languages } from '../helpers/languages'
     export let currentLanguage
+    import { dottedMap } from '../helpers/Routes'
 </script>
 
 <section class="funfact-wrapper text-white">
     <div class="container">
         <div
             class="funfact-content-grid bg-cover bg-center"
-            style="background-image: url('http://localhost:5173/cta-bg.png')"
+            style="background-image: url({dottedMap})"
         >
             {#each languages[currentLanguage].funFacts as { icon, number, label }}
                 <div class="single-funfact-item">
