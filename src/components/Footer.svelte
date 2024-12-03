@@ -9,29 +9,32 @@
     <div class="container">
         <div class="footer-cta pt-5 pb-5">
             <div class="row">
-                <div class="col-xl-4 col-md-4 mb-30">
+                <div class="p-2 col-xl-4 col-md-4 mb-30">
                     <div class="single-cta">
                         <i class="fas fa-map-marker-alt"></i>
                         <div class="cta-text">
-                            <h4>Find us</h4>
-                            <span>NOT N°0053-Tevragh-Zeina Sud-Nouakchott - Mauritania</span>
+                            <h4>{languages[currentLanguage].footer.findUs}</h4>
+                            <span
+                                >NOT N°0053-Tevragh-Zeina Sud-Nouakchott -
+                                Mauritania</span
+                            >
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-4 mb-30">
+                <div class=" p-2 col-xl-4 col-md-4 mb-30">
                     <div class="single-cta">
                         <i class="fas fa-phone"></i>
                         <div class="cta-text">
-                            <h4>Call us</h4>
+                            <h4>{languages[currentLanguage].footer.callUs}</h4>
                             <span>+22232295588</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-4 mb-30">
+                <div class="p-2 col-xl-4 col-md-4 mb-30">
                     <div class="single-cta">
                         <i class="far fa-envelope-open"></i>
                         <div class="cta-text">
-                            <h4>Mail us</h4>
+                            <h4>{languages[currentLanguage].footer.mailUs}</h4>
                             <span>info@mtc-mauritania.com</span>
                         </div>
                     </div>
@@ -125,9 +128,9 @@
     <div class="copyright-area">
         <div class="container">
             <div class="row">
-                    <div class="copyright-text">
-                        <p>Copyright &copy; 2024, All Rights Reserved</p>
-                    </div>
+                <div class="copyright-text">
+                    <p>Copyright &copy; 2024, All Rights Reserved</p>
+                </div>
             </div>
         </div>
     </div>
@@ -151,6 +154,21 @@
         float: left;
         margin-top: 8px;
     }
+    .single-cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .single-cta {
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+    }
+
     .cta-text {
         padding-left: 15px;
         display: inline-block;
@@ -239,5 +257,4 @@
         font-size: 14px;
         color: #878787;
     }
-
 </style>

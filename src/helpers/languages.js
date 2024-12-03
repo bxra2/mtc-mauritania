@@ -166,7 +166,10 @@ export const languages = {
         ],
         ourPartners: 'Our Partners',
         footer: {
-            followUs: 'FOLLOW US',
+            followUs: 'Follow Us',
+            findUs: 'Find Us',
+            callUs: 'Call Us',
+            mailUs: 'Mail Us',
         },
         welcome: 'Welcome to our website!',
         changeLanguage: 'Change Language',
@@ -339,7 +342,10 @@ export const languages = {
         ],
 
         footer: {
-            followUs: 'SUIVEZ-NOUS',
+            followUs: 'Suivez-nous',
+            findUs: 'Trouvez-nous',
+            callUs: 'Appelez-nous',
+            mailUs: 'Écrivez-nous',
         },
         ourPartners: 'Nos partenaires',
         welcome: 'Bienvenue sur notre site web!',
