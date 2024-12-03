@@ -104,16 +104,7 @@
         margin-bottom: var(--row-gap);
     }
 
-    ul li {
-        grid-column: 2;
-        --inlineP: 1.5rem;
-        margin-inline: var(--inlineP);
-        background-color: #fff;
-        grid-row: span 2;
-        display: grid;
-        border-radius: 10px;
-        grid-template-rows: min-content min-content min-content;
-    }
+
 
     ul li .date {
         --dateH: 3rem;
@@ -238,5 +229,84 @@
     }
     .credits a {
         color: var(--color);
+    }
+    @keyframes slideUp {
+        from {
+            transform: translateY(30px); /* Start below */
+            opacity: 0; /* Start invisible */
+        }
+        to {
+            transform: translateY(0); /* End in the final position */
+            opacity: 1; /* Fully visible */
+        }
+    }
+
+    ul li {
+        grid-column: 2;
+        --inlineP: 1.5rem;
+        margin-inline: var(--inlineP);
+        background-color: #fff;
+        grid-row: span 2;
+        display: grid;
+        border-radius: 10px;
+        grid-template-rows: min-content min-content min-content;
+
+        opacity: 0; /* Initially set to invisible */
+        animation: slideUp 0.5s ease-out forwards; /* Apply the animation with forwards so it stays visible after */
+    }
+
+    ul li:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    ul li:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    ul li:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+    ul li:nth-child(4) {
+        animation-delay: 0.6s;
+    }
+
+    ul li:nth-child(5) {
+        animation-delay: 0.8s;
+    }
+
+    ul li:nth-child(6) {
+        animation-delay: 1s;
+    }
+
+    @media (max-width: 768px) {
+        ul li {
+            animation: slideUp 0.5s ease-out forwards; /* Apply the same animation on mobile */
+            opacity: 0;
+        }
+
+        ul li:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        ul li:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        ul li:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        ul li:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        ul li:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+
+        ul li:nth-child(6) {
+            animation-delay: 1s;
+        }
     }
 </style>
