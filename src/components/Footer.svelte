@@ -67,15 +67,15 @@
                             >
                             <a
                                 href="https://www.facebook.com/multiservicetelecomcompany/"
-                                ><i class="fab fa-facebook-f"></i></a
+                                ><i class="fab fa-facebook-f fa-xl"></i></a
                             >
                             <a
                                 href="https://www.instagram.com/multiservice_telecom_company/"
-                                ><i class="fab fa-instagram"></i></a
+                                ><i class="fab fa-instagram fa-xl"></i></a
                             >
                             <a
                                 href="https://www.linkedin.com/company/multiservice-telecom-company/"
-                                ><i class="fab fa-linkedin"></i></a
+                                ><i class="fab fa-linkedin fa-xl"></i></a
                             >
                         </div>
                     </div>
