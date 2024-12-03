@@ -93,9 +93,11 @@
     }
 
     dialog {
+        min-height: fit-content;
         padding: 1rem 3rem;
         background: white;
         border-radius: 20px;
+        height: max-content;
         border: 0;
         box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
         position: fixed;
