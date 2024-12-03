@@ -143,7 +143,7 @@
     .card-btn {
         border: none;
         border-radius: 100px;
-        padding: 3px 20px; /* Reduced padding */
+        padding: 5px; /* Reduced padding */
         font-size: 14px; /* Smaller font size */
         color: #fff;
         margin-bottom: 15px;

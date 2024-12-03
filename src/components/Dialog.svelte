@@ -84,7 +84,8 @@
         font-weight: 600;
         justify-content: center;
         margin: 0;
-        padding: 5px 30px;
+        width:inherit;
+        padding: 8px 25px;
         position: relative;
         text-decoration: none;
         transition: all 250ms;
