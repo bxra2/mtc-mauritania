@@ -12,7 +12,7 @@ export const languages = {
             contact: 'Contact',
         },
         hero: {
-            title: 'Ingénierie',
+            title: 'Engineering',
             description:
                 'We are one of the leading engineering services and solutions companies, providing business value throughout the entire project lifecycle.',
         },

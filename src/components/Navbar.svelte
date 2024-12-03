@@ -7,16 +7,16 @@
     export let currentLanguage
 
     // Reactive state for toggling navbar visibility on mobile
-    let showNav = false;
+    let showNav = false
 
     // Toggle function for the mobile menu
     function toggleNav() {
-        showNav = !showNav;
+        showNav = !showNav
     }
 
     // Close navbar when a link is clicked
     function closeNav() {
-        showNav = false;
+        showNav = false
     }
 </script>
 
@@ -25,13 +25,23 @@
     <nav class="navbar {showNav ? 'show_nav' : ''}">
         <!-- Close button for mobile, hidden on larger screens -->
         <button class="nav-close-btn" on:click={toggleNav}>×</button>
-        
+
         <!-- Navigation links -->
-        <a href="/#" on:click={closeNav}> {languages[currentLanguage].navbar.home} </a>
-        <a href="#history" on:click={closeNav}> {languages[currentLanguage].navbar.history} </a>
-        <a href="#activities" on:click={closeNav}> {languages[currentLanguage].navbar.activity} </a>
-        <a href="#partners" on:click={closeNav}> {languages[currentLanguage].navbar.partners} </a>
-        <a href="#contact" on:click={closeNav}> {languages[currentLanguage].navbar.contact} </a>
+        <a href="/#" on:click={closeNav}>
+            {languages[currentLanguage].navbar.home}
+        </a>
+        <a href="#history" on:click={closeNav}>
+            {languages[currentLanguage].navbar.history}
+        </a>
+        <a href="#activities" on:click={closeNav}>
+            {languages[currentLanguage].navbar.activity}
+        </a>
+        <a href="#partners" on:click={closeNav}>
+            {languages[currentLanguage].navbar.partners}
+        </a>
+        <a href="#contact" on:click={closeNav}>
+            {languages[currentLanguage].navbar.contact}
+        </a>
     </nav>
 
     <!-- Hamburger button for mobile -->
@@ -50,7 +60,11 @@
         justify-content: space-between;
         height: 8dvh;
         padding: 0 2rem;
-        background: linear-gradient(to bottom right, #0c3259, #124c87);
+        background: linear-gradient(
+            to bottom right,
+            #0a2237,
+            #0d3550
+        ); /* Darker gradient */
         color: var(--textColor);
     }
 
@@ -61,13 +75,13 @@
 
     .navbar a {
         margin: 0 1rem;
-        color: #eee;
+        color: #ccc;
         text-decoration: none;
         transition: 0.3s;
     }
 
     .navbar a:hover {
-        color: var(--secondaryColor);
+        color: #fff;
     }
 
     .nav-header .nav-btn {
@@ -76,13 +90,16 @@
         background: transparent;
         border: none;
         outline: none;
-        color: #eee;
+        color: #ccc;
         visibility: visible;
         font-size: 1.8rem;
-        transition: transform 0.3s ease;
+        transition:
+            transform 0.3s ease,
+            color 0.3s ease;
     }
 
     .nav-header .nav-btn:hover {
+        color: #fff;
         transform: translateY(-2px);
     }
 
@@ -106,23 +123,7 @@
         background: none;
         border: none;
         cursor: pointer;
-    }
-
-    /* Styling for mobile navbar */
-    .book-now-nav {
-        display: block;
-        background-color: #7f591c;
-        padding: 8px 20px;
-        border-radius: 20px;
-        cursor: pointer;
-        border-style: none;
-        text-decoration: none;
-        color: white;
-        transition: 0.3s;
-    }
-    .book-now-nav:hover {
-        opacity: 0.9;
-        transform: translateY(-2px);
+        display: none; /* Hide by default */
     }
 
     /* Mobile styling */
@@ -140,14 +141,14 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Align navbar items to the left */
-            justify-content: flex-start; /* Align items to the top */
+            align-items: flex-start;
+            justify-content: flex-start;
             gap: 2.5rem;
             transition: 0.5s;
-            background-color: rgba(180, 180, 180, 0.4);
+            background-color: rgba(30, 30, 30, 0.8);
             backdrop-filter: blur(15px);
             z-index: 1;
-            top: -100%; /* Hide initially */
+            top: -100%;
             padding: 1rem;
         }
 
@@ -156,7 +157,7 @@
             top: 0;
         }
 
-        /* Show close button (X) only on mobile */
+        /* Show close button (X) only on mobile when navbar is open */
         .nav-close-btn {
             display: block;
         }
@@ -164,17 +165,22 @@
         .navbar a {
             font-size: 1.5rem;
             animation: slide 0.5s ease-in;
+            color: #ddd;
         }
 
         .navbar a:hover {
             font-size: 1.6rem;
+            color: #fff;
         }
-    }
 
-    /* Hide the close button (X) on desktop */
-    @media only screen and (min-width: 801px) {
-        .nav-close-btn {
-            display: none;
+        /* Smaller logo on mobile */
+        .navbar-logo {
+            height: 40px;
+            margin-left: 1rem;
+        }
+
+        .nav-header .nav-btn {
+            color: #ccc;
         }
     }
 

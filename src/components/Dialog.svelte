@@ -28,7 +28,7 @@
                 ❌
             </button>
         </div>
-
+        <hr />
         <!-- Section: Description Loop -->
         <div class="modal-sections">
             {#each dialogcontent as section}
@@ -73,7 +73,7 @@
     dialog {
         padding: 1rem 3rem;
         background: white;
-        width: 80%;
+        width: 70%;
         border-radius: 20px;
         border: 0;
         box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
