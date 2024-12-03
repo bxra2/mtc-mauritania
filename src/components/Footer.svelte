@@ -66,14 +66,17 @@
                                     .followUs}</span
                             >
                             <a
+                                aria-label="facebook"
                                 href="https://www.facebook.com/multiservicetelecomcompany/"
                                 ><i class="fab fa-facebook-f fa-xl"></i></a
                             >
                             <a
+                                aria-label="instagram"
                                 href="https://www.instagram.com/multiservice_telecom_company/"
                                 ><i class="fab fa-instagram fa-xl"></i></a
                             >
                             <a
+                                aria-label="linkedin"
                                 href="https://www.linkedin.com/company/multiservice-telecom-company/"
                                 ><i class="fab fa-linkedin fa-xl"></i></a
                             >

@@ -1,6 +1,34 @@
 <script>
     import { languages } from '../helpers/languages'
     export let currentLanguage
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Select all elements that should fade in
+        const elementsToAnimate = document.querySelectorAll('.mission-point')
+
+        const observerOptions = {
+            root: null, // Observe in the viewport
+            rootMargin: '0px',
+            threshold: 0.3, // Trigger when 30% of the element is visible
+        }
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Add animation class when the element is in view
+                    entry.target.classList.add('fade-in-slide-up')
+
+                    // Optional: Remove the observer once the element has animated
+                    observer.unobserve(entry.target)
+                }
+            })
+        }, observerOptions)
+
+        // Start observing each element
+        elementsToAnimate.forEach((element) => {
+            observer.observe(element)
+        })
+    })
 </script>
 
 <section id="mission" class="bg-[#eee] py-20">
@@ -8,8 +36,10 @@
         <h2 class="text-5xl font-bold text-gray-900 text-center">
             {languages[currentLanguage].ourMission.title}
         </h2>
-        <div class="mt-12 grid grid-cols-1 gap-20 sm:grid-cols-2 lg:grid-cols-3 lg:gap-32">
-            <div>
+        <div
+            class="mt-12 grid grid-cols-1 gap-20 sm:grid-cols-2 lg:grid-cols-3 lg:gap-32 fade-in-slide-up"
+        >
+            <div class="mission-point" id="point-1">
                 <div
                     class="flex items-center justify-center h-12 w-12 rounded-md bg-[#064888] text-white"
                 >
@@ -22,7 +52,7 @@
                     </p>
                 </div>
             </div>
-            <div>
+            <div class="mission-point" id="point-2">
                 <div
                     class="flex items-center justify-center h-12 w-12 rounded-md bg-[#064888] text-white"
                 >
@@ -35,7 +65,7 @@
                     </p>
                 </div>
             </div>
-            <div>
+            <div class="mission-point" id="point-3">
                 <div
                     class="flex items-center justify-center h-12 w-12 rounded-md bg-[#064888] text-white"
                 >
@@ -63,10 +93,41 @@
                     <h3 class="text-lg font-medium text-gray-900">Objective</h3>
                     <p class="mt-2 text-base text-gray-500">
                         {languages[currentLanguage].ourMission.points[3]}
-
                     </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    /* Animation for fade-in and slide-up */
+    @keyframes fadeInSlideUp {
+        0% {
+            opacity: .1;
+            transform: translateY(30px); /* Start from below */
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0); /* End at normal position */
+        }
+    }
+
+    /* Apply the fade-in and slide-up animation */
+    .fade-in-slide-up {
+        animation: fadeInSlideUp .9s ease-out forwards;
+    }
+
+    /* Optional: stagger the animations using delay classes */
+    /* .fade-in-slide-up:nth-child(1) {
+        animation-delay: 0.3s;
+    }
+
+    .fade-in-slide-up:nth-child(2) {
+        animation-delay: 0.6s;
+    }
+
+    .fade-in-slide-up:nth-child(3) {
+        animation-delay: 0.9s;
+    } */
+</style>
