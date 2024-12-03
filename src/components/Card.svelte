@@ -1,10 +1,33 @@
 <script>
+    import { onMount } from 'svelte'
     import { languages } from '../helpers/languages'
     import Dialog from './Dialog.svelte'
+
     export let title, desc, iconClasses, dialogcontent
+
+    let cardElement
+
+    // Intersection Observer to trigger the animation when the card enters the viewport
+    onMount(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        // Add class to trigger fade-in and slide-up
+                        entry.target.classList.add('show')
+                    }
+                })
+            },
+            { threshold: 0.2 }
+        ) // Trigger when 10% of the card is visible
+
+        if (cardElement) {
+            observer.observe(cardElement)
+        }
+    })
 </script>
 
-<div class="card-wrap">
+<div bind:this={cardElement} class="card-wrap">
     <div class="card-header one">
         <i class={iconClasses}></i>
     </div>
@@ -46,6 +69,20 @@
         flex-wrap: wrap;
         gap: 30px;
     }
+    @keyframes fadeSlideUp {
+        0% {
+            opacity: 0;
+            transform: translateY(
+                80px
+            ); /* Starts below the original position */
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0); /* Ends at the normal position */
+        }
+    }
+
+    /* Apply the animation to card-wrap */
     .card-wrap {
         width: 300px;
         margin: 20px;
@@ -57,8 +94,14 @@
         box-shadow:
             rgba(0, 0, 0, 0.19) 0px 10px 20px,
             rgba(0, 0, 0, 0.23) 0px 6px 6px;
-
         transition: all 0.2s ease-in-out;
+
+        opacity: 0; /* Initially hidden */
+    }
+
+    .card-wrap.show {
+        opacity: 1;
+        animation: fadeSlideUp 0.8s ease-out; /* Apply the animation */
     }
     /* .card-wrap:hover {
         transform: scale(1.1);

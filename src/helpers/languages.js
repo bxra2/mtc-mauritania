@@ -345,7 +345,7 @@ export const languages = {
             followUs: 'Suivez-nous',
             findUs: 'Trouvez-nous',
             callUs: 'Appelez-nous',
-            mailUs: 'Écrivez-nous',
+            mailUs: 'Envoyez-nous un e-mail',
         },
         ourPartners: 'Nos partenaires',
         welcome: 'Bienvenue sur notre site web!',
