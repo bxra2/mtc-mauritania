@@ -168,8 +168,7 @@
         font-weight: 300;
     }
 
-    ul li .title::before,
-    ul li .descr::before {
+    ul li .title::before {
         content: '';
         position: absolute;
         width: 90%;
