@@ -104,8 +104,6 @@
         margin-bottom: var(--row-gap);
     }
 
-
-
     ul li .date {
         --dateH: 3rem;
         height: var(--dateH);
@@ -277,36 +275,5 @@
 
     ul li:nth-child(6) {
         animation-delay: 1s;
-    }
-
-    @media (max-width: 768px) {
-        ul li {
-            animation: slideUp 0.5s ease-out forwards; /* Apply the same animation on mobile */
-            opacity: 0;
-        }
-
-        ul li:nth-child(1) {
-            animation-delay: 0s;
-        }
-
-        ul li:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        ul li:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-
-        ul li:nth-child(4) {
-            animation-delay: 0.6s;
-        }
-
-        ul li:nth-child(5) {
-            animation-delay: 0.8s;
-        }
-
-        ul li:nth-child(6) {
-            animation-delay: 1s;
-        }
     }
 </style>

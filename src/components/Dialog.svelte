@@ -12,6 +12,26 @@
         dialog.close() // Close the dialog
     }
 
+    // Close the dialog if click happens outside of modal content
+    function handleOutsideClick(event) {
+        if (event.target === dialog) {
+            closeModal()
+        }
+    }
+
+    // Set up the event listener for clicking outside
+    import { onMount, onDestroy } from 'svelte'
+
+    onMount(() => {
+        // Add the event listener when the component mounts
+        dialog.addEventListener('click', handleOutsideClick)
+    })
+
+    onDestroy(() => {
+        // Remove the event listener when the component is destroyed
+        dialog.removeEventListener('click', handleOutsideClick)
+    })
+    
     console.log('dialogcontent', dialogcontent)
 </script>
 
@@ -19,13 +39,13 @@
 <button class="button-6" on:click={showModal}>Learn More..</button>
 
 <!-- Modal dialog with multiple sections -->
-<dialog bind:this={dialog}>
+<dialog bind:this={dialog} class=" w-full sm:w-[70%]">
     <div class="modal-content">
         <!-- Section 1: Title and Close Button -->
         <div class="modal-section-header title">
             <h2>{title}</h2>
             <button on:click={closeModal} aria-label="close" class="x">
-                ❌
+                <i class="fa-solid fa-x"></i>
             </button>
         </div>
         <hr />
@@ -34,9 +54,11 @@
             {#each dialogcontent as section}
                 <div class="modal-section description">
                     <h3>{section.title}</h3>
-                    {#each section.description as desc}
-                        <p>{desc}</p>
-                    {/each}
+                    <ul>
+                        {#each section.description as desc}
+                            <li>{desc}</li>
+                        {/each}
+                    </ul>
                 </div>
             {/each}
         </div>
@@ -73,11 +95,11 @@
     dialog {
         padding: 1rem 3rem;
         background: white;
-        width: 70%;
         border-radius: 20px;
         border: 0;
         box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
         position: fixed;
+        cursor: auto;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -92,6 +114,7 @@
         align-items: center;
         justify-content: space-around;
         height: 100%;
+        position: relative;
     }
 
     .modal-sections {
@@ -106,6 +129,7 @@
     .modal-section-header {
         width: 100%;
         margin: 10px;
+        padding-bottom: 20px;
     }
 
     .modal-section {
@@ -135,22 +159,22 @@
         top: 2px;
         right: 10px;
         font-size: 1.5rem;
-        color: red;
+        color: #aaa;
         background: none;
         border: none;
         cursor: pointer;
     }
 
     .modal-section.description h3 {
-        font-size: 1.5rem;
-        font-weight: 500;
+        font-size: 1.6rem;
+        font-weight: 600;
         margin-bottom: 10px;
     }
 
-    .modal-section.description p {
+    .modal-section.description li {
         font-size: 1rem;
         line-height: 1.5;
-        padding: 10px;
+        padding-bottom: 10px;
     }
 
     .x {
@@ -158,7 +182,7 @@
         background: none;
         cursor: pointer;
         font-size: 1.5rem;
-        color: red;
+        color: #aaa;
         transition: transform 0.3s ease;
     }
 
