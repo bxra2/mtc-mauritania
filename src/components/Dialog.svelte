@@ -214,7 +214,7 @@
 
         .modal-content {
             padding: 10px; /* Adjust padding for smaller screens */
-            min-height: 200px; /* Ensure the modal doesn't collapse */
+            min-height: 90%; /* Ensure the modal doesn't collapse */
         }
 
         .modal-section-header.title h2 {
