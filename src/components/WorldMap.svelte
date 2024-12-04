@@ -46,19 +46,19 @@
             <ul>
                 <li>
                     <i class="fa-solid fa-location-dot pin" style="color: red;"
-                    ></i> <span>Établi</span>
+                    ></i> <span>{languages[currentLanguage].presenceInTheWorld.established}</span>
                 </li>
                 <li>
                     <i
                         class="fa-solid fa-location-dot pin"
                         style="color: green;"
-                    ></i> <span>En cours</span>
+                    ></i> <span>{languages[currentLanguage].presenceInTheWorld.inProgress}</span>
                 </li>
                 <li>
                     <i
                         class="fa-solid fa-location-dot pin"
                         style="color: orange;"
-                    ></i> <span>En étude</span>
+                    ></i> <span>{languages[currentLanguage].presenceInTheWorld.underStudy}</span>
                 </li>
             </ul>
         </div>
@@ -137,7 +137,6 @@
 
     .keymap ul {
         list-style-type: none;
-        padding-left: 0;
         display: flex;
         justify-content: space-evenly;
         margin-top: 20px;
@@ -145,12 +144,17 @@
 
     .keymap li {
         display: flex;
+        padding: 5px;
         align-items: center;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin: 0 15px;
     }
 
-    .keymap i {
+    .keymap span{
+        margin: 0 10px;
+    }
+
+    .keymap li i {
         padding-right: 10px;
     }
 

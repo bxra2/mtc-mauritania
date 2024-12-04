@@ -3,7 +3,7 @@
     import { languages } from '../helpers/languages'
     import Dialog from './Dialog.svelte'
 
-    export let title, desc, iconClasses, dialogcontent
+    export let title, desc, iconClasses, dialogcontent,currentLanguage
 
     let cardElement
 
@@ -36,7 +36,7 @@
         <p class="card-text">
             {desc}
         </p>
-        <button class="card-btn one"><Dialog {title} {dialogcontent} /></button>
+        <button class="card-btn one"><Dialog {currentLanguage} {title} {dialogcontent} /></button>
     </div>
 </div>
 

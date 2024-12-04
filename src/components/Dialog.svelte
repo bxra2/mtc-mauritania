@@ -1,7 +1,8 @@
 <script>
     let dialog // Bind the dialog element
     export let dialogcontent, title
-
+    import { languages } from '../helpers/languages'
+    export let currentLanguage
     // Function to open the modal
     function showModal() {
         dialog.showModal() // Open the dialog
@@ -31,12 +32,14 @@
         // Remove the event listener when the component is destroyed
         dialog.removeEventListener('click', handleOutsideClick)
     })
-    
+
     console.log('dialogcontent', dialogcontent)
 </script>
 
 <!-- Button to trigger modal opening -->
-<button class="button-6" on:click={showModal}>Learn More..</button>
+<button class="button-6" on:click={showModal}
+    >{languages[currentLanguage].activity.learnMore}</button
+>
 
 <!-- Modal dialog with multiple sections -->
 <dialog bind:this={dialog} class=" w-full sm:w-[70%]">
@@ -84,7 +87,7 @@
         font-weight: 600;
         justify-content: center;
         margin: 0;
-        width:inherit;
+        width: inherit;
         padding: 8px 25px;
         position: relative;
         text-decoration: none;
@@ -92,7 +95,7 @@
         vertical-align: baseline;
         border-radius: 100px;
     }
-
+    /* Base styles for larger screens (laptops and up) */
     dialog {
         min-height: fit-content;
         padding: 1rem 3rem;
@@ -102,7 +105,6 @@
         border: 0;
         box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
         position: fixed;
-        cursor: auto;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -199,6 +201,43 @@
         }
         to {
             opacity: 1;
+        }
+    }
+
+    /* Mobile adjustments (screens 768px or smaller) */
+    @media (max-width: 768px) {
+        dialog {
+            min-width: 80vw; /* Ensure the dialog is responsive, but not too wide */
+            max-width: 90vw; /* Set a maximum width */
+            padding: 0rem 1rem; /* Reduce padding for mobile */
+        }
+
+        .modal-content {
+            padding: 10px; /* Adjust padding for smaller screens */
+            min-height: 200px; /* Ensure the modal doesn't collapse */
+        }
+
+        .modal-section-header.title h2 {
+            font-size: 1.5rem; /* Slightly smaller title font on mobile */
+        }
+
+        .modal-section-header.title .x {
+            font-size: 1.2rem; /* Smaller close icon on mobile */
+            top: 5px;
+            right: 5px;
+        }
+
+        .modal-section.description h3 {
+            font-size: 1.4rem; /* Smaller section headers on mobile */
+        }
+
+        .modal-section.description li {
+            font-size: 0.9rem; /* Adjust font size for better readability on mobile */
+        }
+
+        .modal-sections {
+            flex-direction: column; /* Stack the sections vertically on mobile */
+            gap: 10px; /* Smaller gap between sections */
         }
     }
 </style>

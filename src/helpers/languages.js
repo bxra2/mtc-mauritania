@@ -15,6 +15,7 @@ export const languages = {
             title: 'Engineering',
             description:
                 'We are one of the leading engineering services and solutions companies, providing business value throughout the entire project lifecycle.',
+            contactUs: 'Contact Us',
         },
         ourHistory: {
             title: 'OUR HISTORY',
@@ -41,7 +42,7 @@ export const languages = {
             telecomTitle: 'TELECOM',
             energyTitle: 'ENERGY',
             itTitle: 'IT',
-
+            learnMore: 'Learn More..',
             telecom: [
                 'Main business activity: Infrastructure, Telecommunication networks, Fiber Optics, GSM',
             ],
@@ -141,6 +142,9 @@ export const languages = {
                 'THIRD LLC OFFICE IN NEW YORK COMING SOON',
                 'OFFICE IN ITALY COMING SOON',
             ],
+            established: 'Established',
+            inProgress: 'In progress',
+            underStudy: 'Under study',
         },
         funFacts: [
             {
@@ -189,6 +193,7 @@ export const languages = {
             title: 'Ingénierie',
             description:
                 "Nous sommes l'une des principales sociétés de services et de solutions d'ingénierie de bout en bout offrant une valeur commerciale tout au long du cycle de vie du projet.",
+            contactUs: 'Contactez-nous',
         },
         ourHistory: {
             title: 'NOTRE HISTORIQUE',
@@ -199,7 +204,7 @@ export const languages = {
                 2021: 'Augmentation du capital Augmentation de 109%',
                 2022: 'Augmentation du Capital Augmentation de 69% CA = 2MDH',
                 2023: 'Extension CA +4MDHS',
-                2024: 'UK Second Office & NY LLC Third Office',
+                2024: 'UK Deuxième bureau et NY LLC Troisième bureau',
             },
         },
         video: "Est le leader Marocain indépendant des services multi-techniques dans  domaines du systèmes de communication ,Génie civil ainsi que des services spécialisés liés à l'énergie.",
@@ -215,7 +220,7 @@ export const languages = {
             telecomTitle: 'TELECOM',
             energyTitle: 'ENERGY',
             itTitle: 'IT',
-
+            learnMore: 'En savoir plus..',
             telecom: [
                 "Principale activité de l'entreprise : Infrastructure, Réseaux de télécommunication, Fibre optique, GSM.",
             ],
@@ -317,6 +322,9 @@ export const languages = {
                 'TROISIÈME BUREAU LLC À NEW YORK À VENIR BIENTÔT',
                 'BUREAU EN ITALIE À VENIR BIENTÔT',
             ],
+            established: 'Établi',
+            inProgress: 'En cours',
+            underStudy: 'En étude',
         },
         funFacts: [
             {

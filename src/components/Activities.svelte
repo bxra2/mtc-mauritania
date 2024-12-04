@@ -35,18 +35,21 @@
     </h2>
     <div class="container">
         <Card
+            {currentLanguage}
             dialogcontent={languages[currentLanguage].telecom}
             title={languages[currentLanguage].activity.telecomTitle}
             iconClasses={'fa-solid fa-tower-cell fa-6x'}
             desc={languages[currentLanguage].activity.telecom}
         />
         <Card
+            {currentLanguage}
             dialogcontent={languages[currentLanguage].energy}
             title={languages[currentLanguage].activity.energyTitle}
             iconClasses={'fa-solid fa-bolt fa-6x'}
             desc={languages[currentLanguage].activity.energy}
         />
         <Card
+            {currentLanguage}
             dialogcontent={languages[currentLanguage].IT}
             title={languages[currentLanguage].activity.itTitle}
             iconClasses={'fa-solid fa-network-wired fa-6x'}

@@ -44,13 +44,11 @@
         </a>
     </nav>
 
-    <!-- Hamburger button for mobile -->
+    <Flag {currentLanguage} />
+
     <button class="nav-btn" on:click={toggleNav}>
         <i class="fas fa-bars"></i>
     </button>
-
-    <!-- Language selector -->
-    <Flag {currentLanguage} />
 </header>
 
 <style>
@@ -132,7 +130,9 @@
             visibility: visible;
             display: block;
         }
-
+        .nav-header {
+            padding: 0 1rem 0 0;
+        }
         .navbar {
             position: fixed;
             top: 0;

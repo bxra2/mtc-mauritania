@@ -29,7 +29,7 @@
                     aria-label="Contact us for more information"
                     class="bg-[#064888] hover:bg-[#053c63] text-white hover:text-white rounded shadow hover:shadow-lg py-3 px-6 transition ease-in-out duration-300"
                 >
-                    Contact Us
+                    {languages[currentLanguage].hero.contactUs}
                 </a>
             </div>
 
